@@ -14,7 +14,7 @@ Some of these computers are called "servers". Servers are the backbone of the in
 
 ### What is a "client"? What is a "server"?
 
-- A "client" is the tool in which the user interacts with data from servers.
+- A "client" is what the user uses on their machine to request information from servers (websites really).
 
 - A "server" is a computer which stores data in order server when someone requests it (web page, file, video, etc.)
 
