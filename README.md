@@ -43,7 +43,7 @@ A packet is a tiny piece of the original file which is being sent - (either from
 
 It's very efficient to break a large file into smaller bits, send them to the their destination computer, and have that computer reassemble them into the orginial file.
 
-Packaging a file can be thought of as cutting a flower vase into pieces and sending them to a friend with instructions on how to reassble the vase. One, you've just saved a lot space in mailing the vase. Two, your friend does all the work reassbling it. Three, it was efficient to send because it was precisely cut and sent with specific instructions.
+Packaging a file can be thought of as cutting a glass into pieces and sending them to a friend with instructions on how to reassble the vase. One, you've just saved a lot space in mailing the glass for your friend to drink with. Two, your friend does all the work reassbling it. Three, it was efficient to send because it was precisely cut and sent with specific instructions.
 
 We've covered how the the internet is structured, but how does the computer sendin the data know *where* it needs to go? That's where IP Addresses come in!
 
