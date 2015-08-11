@@ -1,6 +1,8 @@
 ## Web Technology Guide
 
-> The internet is not a [series of tubes](https://www.youtube.com/watch?v=f99PcP0aFNE)! 
+> The internet is NOT a ["series of tubes"](https://www.youtube.com/watch?v=f99PcP0aFNE)! 
+
+This intro-web guide will broadly cover important concepts in how the web works, how people interact with it, and the tools used to create and maintain web pges, apis, databases, etc.
 
 ### What is the internet?
 
@@ -45,7 +47,10 @@ Packaging a file can be thought of as cutting a flower vase into pieces and send
 
 We've covered how the the internet is structured, but how does the computer sendin the data know *where* it needs to go? That's where IP Addresses come in!
 
-### What are IP Addresses
+### What is an IP Address?
+
+
+**Todo**
 
 > What is an HTTP Request?
 
