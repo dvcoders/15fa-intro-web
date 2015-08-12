@@ -49,6 +49,7 @@ We've covered how the the internet is structured, but how does the computer send
 
 ### What is an IP Address?
 
+An IP Address is a unique number assinged to a device which connects to a comptuer network.
 
 **Todo**
 
