@@ -49,7 +49,7 @@ We've covered how the the internet is structured, but how does the computer send
 
 ### What is an IP Address?
 
-An IP Address is a unique number assinged to a device which connects to a comptuer network.
+An IP Address is a unique number assigned to a device which connects to a computer network.
 
 **Todo**
 
@@ -70,5 +70,5 @@ An IP Address is a unique number assinged to a device which connects to a comptu
 
 Some amazing people detailed and described **every single step** from pressing `Enter/Return ⏎` on your keyboard to accessing a server on a CDN.
 
-It's amazing and it's called [what happens when?](https://github.com/what-happens-when) - you should read the entire thing, it's absolutey fascinating!
+It's amazing and it's called [what happens when?](https://github.com/what-happens-when) - you should read the entire thing, it's absolutely fascinating!
 
