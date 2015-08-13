@@ -65,7 +65,10 @@ An IP Address is a unique number assinged to a device which connects to a comptu
 
 > What is your browser's Web Inspector (aka Developer Tools) and how can you use it to poke around in a page's HTML?
 
-> What happens when you click "search" on google.com?
 
+### What happens when you click "search" on google.com?
 
+Some amazing people detailed and described **every single step** from pressing `Enter/Return ⏎` on your keyboard to accessing a server on a CDN.
+
+It's amazing and it's called [what happens when?](https://github.com/what-happens-when) - you should read the entire thing, it's absolutey fascinating!
 
