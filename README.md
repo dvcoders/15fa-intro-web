@@ -68,7 +68,7 @@ An IP Address is a unique number assigned to a device which connects to a comput
 
 ### What happens when you click "search" on google.com?
 
-Some amazing people detailed and described **every single step** from pressing `Enter/Return ⏎` on your keyboard to accessing a server on a CDN.
+Some amazing people detailed and described **every single step** from pressing `Enter/Return ⏎` on your keyboard to the entire HTTP exchange.
 
 It's amazing and it's called [what happens when?](https://github.com/what-happens-when) - you should read the entire thing, it's absolutely fascinating!
 
