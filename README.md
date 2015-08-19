@@ -49,7 +49,16 @@ We've covered how the the internet is structured, but how does the computer send
 
 ### What is an IP Address?
 
-An IP Address is a unique number assigned to a device which connects to a computer network.
+An IP address is a unique number assigned to computer while you're connected to a computer network.
+
+An IP address is assigned by following protocols, *TCP * and *IP*. This protocol is responsible for addressing, routing, and accessing information.
+
+An IP address looks like this: **192.235.5.154**
+
+That is an example of a IPv4 (32 bit) address, which was an early addresses protocol. There have been so many devices connecting to the internet, that IPv6 (128 bit) needed to be invented to accommodate new devices.
+
+Just to put it into perspective, IPv4 can hold 4.2 billion unique addresses. IPv6 can hold 3.4 * 10^38 addresses!
+
 
 **Todo**
 
