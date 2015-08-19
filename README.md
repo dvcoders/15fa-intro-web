@@ -59,10 +59,10 @@ That is an example of a IPv4 (32 bit) address, which was an early addresses prot
 
 Just to put it into perspective, IPv4 can hold 4.2 billion unique addresses. IPv6 can hold 3.4 * 10^38 addresses!
 
+### What is an HTTP Request?
+
 
 **Todo**
-
-> What is an HTTP Request?
 
 > What are DNS servers?
 
