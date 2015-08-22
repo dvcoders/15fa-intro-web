@@ -49,22 +49,30 @@ We've covered how the the internet is structured, but how does the computer send
 
 ### What is an IP Address?
 
+**192.235.5.154**
+
 An IP address is a unique number assigned to computer while you're connected to a computer network.
 
-An IP address is assigned by following protocols, *TCP * and *IP*. This protocol is responsible for addressing, routing, and accessing information.
-
-An IP address looks like this: **192.235.5.154**
+It is assigned by following protocols, *TCP * and *IP*. This protocol is responsible for addressing, routing, and transferring information. You can read more about TCP/IP [here](http://www.thegeekstuff.com/2011/11/tcp-ip-fundamentals/).
 
 That is an example of a IPv4 (32 bit) address, which was an early addresses protocol. There have been so many devices connecting to the internet, that IPv6 (128 bit) needed to be invented to accommodate new devices.
 
-Just to put it into perspective, IPv4 can hold 4.2 billion unique addresses. IPv6 can hold 3.4 * 10^38 addresses!
+Just to put it into perspective, IPv4 can hold 4.2 x 10^9 unique addresses. IPv6 can hold 3.4 * 10^38 addresses!
+
+### What are DNS servers?
+
+When a user accesses a website like [twitter.com](https://twitter.com), the **Domain Name System** translates the human-readable url twitter.com into an IP Address by doing a **lookup**.
+
+The Domain Name System is maintained by a distributed database system, which uses the client–server model. The nodes of this database are the name servers. 
+
+Each domain has at least one authoritative DNS server that publishes information about that domain and the name servers of any domains subordinate to it. The top of the hierarchy is served by the root name servers, the servers to query when looking up (resolving) a TLD. 
+
+[Source: [Wikipedia](https://en.wikipedia.org/wiki/Domain_Name_System#Name_servers)]
 
 ### What is an HTTP Request?
 
 
 **Todo**
-
-> What are DNS servers?
 
 > What is CSS and how is it used?
 
@@ -75,7 +83,7 @@ Just to put it into perspective, IPv4 can hold 4.2 billion unique addresses. IPv
 
 ### What happens when you click "search" on google.com?
 
-Some amazing people detailed and described **every single step** from pressing `Enter/Return ⏎` on your keyboard to accessing a server on a CDN.
+Some amazing people detailed and described **every single step** from pressing `Enter/Return ⏎` on your keyboard to the entire HTTP exchange.
 
 It's amazing and it's called [what happens when?](https://github.com/what-happens-when) - you should read the entire thing, it's absolutely fascinating!
 
