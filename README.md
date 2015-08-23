@@ -69,10 +69,53 @@ Each domain has at least one authoritative DNS server that publishes information
 
 [Source: [Wikipedia](https://en.wikipedia.org/wiki/Domain_Name_System#Name_servers)]
 
-### What is an HTTP Request?
+### What is HTML and how is it used?
 
+HyperText Markup Language is a markup language used to add structure and content to webpages.
+
+HTML is composed of a series of tags such as `<p>` (paragraph) and `<div>` (image) to indicate different types of content.
+
+Your browser interprets the tags and uses them to display the content how it is specified.
+
+HTML follows the Document Object Model (DOM) convention. The DOM is a "tree" or "hierarchy" composed of objects. HTML elements are objects in the tree. Tags such as `<p>` and `<div>` specify elements. The DOM is called a "tree" because elements can be "children" of an element, or "parents" of elements as well.
+
+![DOM Tree](http://www.w3schools.com/js/pic_htmltree.gif)
+
+(Image courtesy of w3schools.com)
+
+Play around with HTML by creating a file with the extension `.html` using any text editor. You can learn about the specific syntax and structure from [w3schools](http://www.w3schools.com/html/) or [devdocs](http://devdocs.io/html/) for quick reference.
+
+For now, start off with an `.html` file with these elements:
+
+```
+<!DOCTYPE html>
+<html>
+  <head> 
+    <title>My Cool Site</title> <!-- This is displayed in the "tab" for your site on your browser -->
+  </head>
+
+  <body>
+    <!-- The <h[NUMBER]> tag is for "headers" which means big bold text -->
+    <h1>Big heading</h1> 
+    <h2>Smaller heading</h2>
+    <h3>Even smaller heading</h3>
+    <h6>The smallest heading</h6>
+    
+    <!-- Paragraphs start with <p> tag, surprise! -->
+    <p>This is a paragraph</p>
+    
+    <!-- you can include images too -->
+    <img src="http://i.imgur.com/J8TTXgx.png"> 
+    
+    <!-- Line break -->
+    <br> 
+    <p> <b>Have fun!</b> play around with tags.</p>
+  </body>
+</html>
+```
 
 **Todo**
+> What is an HTTP request?
 
 > What is CSS and how is it used?
 
@@ -87,49 +130,4 @@ Some amazing people detailed and described **every single step** from pressing `
 
 It's amazing and it's called [what happens when?](https://github.com/what-happens-when) - you should read the entire thing, it's absolutely fascinating!
 
-
-### What is HTML and how is it used?
-
-
-HyperText Markup Language is a markup language used to add structure and content to webpages.
-
-
-HTML is composed of a series of tags such as `<p>` (paragraph) and `<div>` (image) to indicate different types of content.
-  
-
-Your browser interprets the tags and uses them to display the content how it is specified.
-
-
-HTML follows the Document Object Model (DOM) convention. The DOM is a "tree" or "hierarchy" composed of objects. HTML elements are objects in the tree. Tags such as `<p>` and `<div>` specify elements. The DOM is called a "tree" because elements can be "children" of an element, or "parents" of elements as well.
-
-![DOM Tree](http://www.w3schools.com/js/pic_htmltree.gif)
-
-
-(Image courtesty of w3schools.com)
-
-
-Play around with HTML by creating a file with the extension `.html` using any text editor. You can learn about the specific syntax and structure from [w3schools](http://www.w3schools.com/html/) but for now you can start off with something simple like this:
-
-
-```
-<!DOCTYPE html>
-<html>
-<!-- This is a comment, it won't show up on the website -->
-<head> <!-- This section includes information about your page, 
-            including links to CSS and Javascript (which we'll talk about later) -->
-  <title>My Cool Site</title> <!-- This is displayed in the "tab" for your site on your browser -->
-</head>
-
-<body>
-  <h1>Big heading</h1> <!-- The <h[NUMBER]> tag is for "headers" which means big bold text -->
-  <h2>Smaller heading</h2>
-  <h3>Even smaller heading</h3>
-  <p>This is a paragraph</p> <!-- <p> is for paragraph, what a surprise -->
-  <img src="http://i.imgur.com/J8TTXgx.png"> <!-- you can include images too -->
-  <br> <!-- Line break -->
-  <br>
-  <p><b>Have fun</b> play around with tags.</p>
-</body>
-</html>
-```
 
