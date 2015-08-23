@@ -94,13 +94,13 @@ It's amazing and it's called [what happens when?](https://github.com/what-happen
 HyperText Markup Language is a markup language used to add structure and content to webpages.
 
 
-HTML is composed of a series of tags such as `<p>` (paragraph) and `<img>` (image) to indicate different types of content.
+HTML is composed of a series of tags such as `<p>` (paragraph) and `<div>` (image) to indicate different types of content.
   
 
 Your browser interprets the tags and uses them to display the content how it is specified.
 
 
-HTML follows the Document Object Model (DOM) convention. The DOM is a "tree" or "hierarchy" composed of objects. HTML elements are objects in the tree. Tags such as `<p>` and `<img>` specify elements. The DOM is called a "tree" because elements can be "children" of an element, or "parents" of elements as well.
+HTML follows the Document Object Model (DOM) convention. The DOM is a "tree" or "hierarchy" composed of objects. HTML elements are objects in the tree. Tags such as `<p>` and `<div>` specify elements. The DOM is called a "tree" because elements can be "children" of an element, or "parents" of elements as well.
 
 ![DOM Tree](http://www.w3schools.com/js/pic_htmltree.gif)
 
