@@ -66,7 +66,6 @@ Just to put it into perspective, IPv4 can hold 4.2 billion unique addresses. IPv
 
 > What are DNS servers?
 
-> What is CSS and how is it used?
 
 > What's the difference between static and dynamic web pages?
 
@@ -86,7 +85,7 @@ It's amazing and it's called [what happens when?](https://github.com/what-happen
 HyperText Markup Language is a markup language used to add structure and content to webpages.
 
 
-HTML is composed of a series of tags such as `<p>` (paragraph) and `<img>` (image) to indicate different types of content.
+HTML is composed of a series of tags such as `<p>` (paragraph) and `<img>` (image) to indicate different types of content. The `<div>` tag is used to break up groups of content.
   
 
 Your browser interprets the tags and uses them to display the content how it is specified.
@@ -114,8 +113,10 @@ Play around with HTML by creating a file with the extension `.html` using any te
 
 <body>
   <h1>Big heading</h1> <!-- The <h[NUMBER]> tag is for "headers" which means big bold text -->
-  <h2>Smaller heading</h2>
-  <h3>Even smaller heading</h3>
+  <div class="small-headings"> <!-- Classes will be discussed in the CSS section. -->
+    <h2>Smaller heading</h2>
+    <h3>Even smaller heading</h3>
+  </div>
   <p>This is a paragraph</p> <!-- <p> is for paragraph, what a surprise -->
   <img src="http://i.imgur.com/J8TTXgx.png"> <!-- you can include images too -->
   <br> <!-- Line break -->
@@ -124,4 +125,80 @@ Play around with HTML by creating a file with the extension `.html` using any te
 </body>
 </html>
 ```
+
+
+### What is CSS and how is it used?
+
+
+Cascading Style Sheets is a language used to design the appearance and formatting of a webpage.
+
+
+To use CSS for your webpage, create a file with the extension `.css` in the same directory (folder) as your html file. Then you tell your HTML to look for the stylesheet by putting the following line in the `<head>` section:
+
+
+```<link rel="stylesheet" type="text/css" href="[FILENAME].css">```
+
+
+CSS uses "selectors" to refer to the portions of the document that you want to affect. The selector `p` refers to all paragraphs in your HTML.
+
+
+After the selector are a number of declarations, which include properties and values. One such declaration might be `background-color: green`. Put it together with a selector like this:
+
+
+```
+p {
+  background-color:green;
+  /* Inlude more declarations here */
+}
+
+/* Include more selectors here */
+```
+
+
+In this case, `background-color` is a property and `green` is a value.
+
+
+Let's say you only want to affect *some* of the paragraphs in your html. What selector would you use? An easy solution is to use classes in your html. To do so, go back to your html document, and change the tag of the element you want to affect like so:
+
+
+```<p class="red-paragraph">This is a paragraph</p>```
+
+
+Now in your css, use the selector `.red-paragraph` to refer to any element with the class "red-paragraph". IDs are similar, except they can only be used for *one* element and the CSS selector uses a # instead of a period like so: `#id-name`. The html element for an ID looks like `<p id="id-name">`. Elements can even have multiple classes, just separate them with a space like so `<p class="class-1 class-2">`.
+
+
+There is a lot to learn about CSS and [w3schools](http://learnxinyminutes.com/docs/css/) is a great reference. For now, you can play around with CSS by writing it in `style.css` and then adding `<link rel="stylesheet" type="text/css" href="style.css">` to your html `<head>` section. One example CSS file might look like this:
+
+
+```
+html { /* The html selector refers to the entire document */
+  background-color: #CCFFFF; /* This is a hex code referring to a color */
+}
+
+h1 {
+  text-align: center;
+}
+
+.small-headings { 
+/* Remember the <div class="small-headings"> tag from the html? */
+  border-style: solid;
+  border-width: 4px;
+}
+
+p {
+  font-family: serif;
+  font-style: italic;
+}
+
+.red-paragraph { 
+/* Remember to add the class red-paragraph to your <p> tag in order for this to have affect */
+  color: red;
+}
+```
+
+
+Notice that `red-paragraph` is in italics, because the declaration in `p` affects *ALL* paragraphs, even the ones with a class.
+
+
+There's a lot of really cool stuff you can do with CSS now, but unfortunately not everything is supported by all browsers. Check out some cool stuff like [transitions](http://www.w3schools.com/css/css3_transitions.asp) and [animations](http://www.w3schools.com/css/css3_animations.asp).
 
