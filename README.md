@@ -119,6 +119,9 @@ For now, start off with an `.html` file with these elements:
 
 > What is CSS and how is it used?
 
+> What is JavaScript? 
+> // Link to `intro-javascript`
+
 > What's the difference between static and dynamic web pages?
 
 > What is your browser's Web Inspector (aka Developer Tools) and how can you use it to poke around in a page's HTML?
@@ -129,5 +132,3 @@ For now, start off with an `.html` file with these elements:
 Some amazing people detailed and described **every single step** from pressing `Enter/Return ⏎` on your keyboard to the entire HTTP exchange.
 
 It's amazing and it's called [what happens when?](https://github.com/what-happens-when) - you should read the entire thing, it's absolutely fascinating!
-
-
