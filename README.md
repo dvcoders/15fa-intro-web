@@ -67,7 +67,7 @@ Just to put it into perspective, IPv4 can hold 4.2 billion unique addresses. IPv
 > What are DNS servers?
 
 
-> What's the difference between static and dynamic web pages?
+
 
 > What is your browser's Web Inspector (aka Developer Tools) and how can you use it to poke around in a page's HTML?
 
@@ -202,3 +202,16 @@ Notice that `red-paragraph` is in italics, because the declaration in `p` affect
 
 There's a lot of really cool stuff you can do with CSS now, but unfortunately not everything is supported by all browsers. Check out some cool stuff like [transitions](http://www.w3schools.com/css/css3_transitions.asp) and [animations](http://www.w3schools.com/css/css3_animations.asp).
 
+
+### What's the difference between static and dynamic web pages?
+
+
+![Static vs. dynamic](http://www.smooth-step.com/images/content/dynamic-static-website-schemes3.gif)
+
+
+(Image courtesy of http://www.smooth-step.com/web-design/dynamic-websites)
+
+A static web page is one whose content comes entirely from the files delivered to the client. The example HTML from above is a static webpage. Unless the web page is changed by the owner, a static web page will look the same for every visitor.
+
+
+A dynamic web page relies on a server to fetch information. For example, [The New York Times](http://www.nytimes.com) is dynamic. Otherwise, every time a news story came out, the HTML and CSS would have to be edited. A dynamic page site uses a language such as Python, PHP, or Java to fetch the relevant information from the server.
