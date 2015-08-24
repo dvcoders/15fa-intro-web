@@ -113,7 +113,7 @@ For now, start off with an `.html` file with these elements:
   </body>
 </html>
 ```
-I
+
 **Todo**
 > What is an HTTP request?
 
