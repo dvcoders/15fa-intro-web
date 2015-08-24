@@ -113,19 +113,19 @@ For now, start off with an `.html` file with these elements:
   </body>
 </html>
 ```
-
+I
 **Todo**
 > What is an HTTP request?
 
 > What is CSS and how is it used?
 
-> What is JavaScript? 
-> // Link to `intro-javascript`
-
 > What's the difference between static and dynamic web pages?
 
 > What is your browser's Web Inspector (aka Developer Tools) and how can you use it to poke around in a page's HTML?
 
+### What is JavaScript?
+
+Javascript is the language which allows you to add, find, update, and manipulate elements in HTML and CSS (along with many other awesome features). It is *essential* to the web, so we wrote **an entire `intro` guide** for it which you can [dvcoders/intro-javascript](https://github.com/dvcoders/intro-javascript).
 
 ### What happens when you click "search" on google.com?
 
