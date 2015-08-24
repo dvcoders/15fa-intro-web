@@ -96,7 +96,7 @@ HTML follows the Document Object Model (DOM) convention. The DOM is a "tree" or 
 ![DOM Tree](http://www.w3schools.com/js/pic_htmltree.gif)
 
 
-(Image courtesty of w3schools.com)
+(Image courtesy of [w3schools.com](http://www.w3schools.com))
 
 
 Play around with HTML by creating a file with the extension `.html` using any text editor. You can learn about the specific syntax and structure from [w3schools](http://www.w3schools.com/html/) but for now you can start off with something simple like this:
@@ -149,7 +149,7 @@ After the selector are a number of declarations, which include properties and va
 ```
 p {
   background-color:green;
-  /* Inlude more declarations here */
+  /* Include more declarations here */
 }
 
 /* Include more selectors here */
@@ -159,7 +159,7 @@ In this case, `background-color` is a property and `green` is a value.
 
 Let's say you only want to affect *some* of the paragraphs in your html. What selector would you use? An easy solution is to use classes in your html. To do so, go back to your html document, and change the tag of the element you want to affect like so:
 
-```<p class="red-paragraph">This is a paragraph</p>```
+`<p class="red-paragraph">This is a paragraph</p>`
 
 Now in your css, use the selector `.red-paragraph` to refer to any element with the class "red-paragraph". IDs are similar, except they can only be used for *one* element and the CSS selector uses a # instead of a period like so: `#id-name`. The html element for an ID looks like `<p id="id-name">`. Elements can even have multiple classes, just separate them with a space like so `<p class="class-1 class-2">`.
 
@@ -167,7 +167,8 @@ There is a lot to learn about CSS and [w3schools](http://learnxinyminutes.com/do
 
 ```
 html { /* The html selector refers to the entire document */
-  background-color: #CCFFFF; /* This is a hex code referring to a color */
+  /* This is a hex code referring to a color */
+  background-color: #CCFFFF; 
 }
 
 h1 {
@@ -175,7 +176,7 @@ h1 {
 }
 
 .small-headings { 
-/* Remember the <div class="small-headings"> tag from the html? */
+  /* Remember the <div class="small-headings"> tag from the html? */
   border-style: solid;
   border-width: 4px;
 }
@@ -186,7 +187,7 @@ p {
 }
 
 .red-paragraph { 
-/* Remember to add the class red-paragraph to your <p> tag in order for this to have affect */
+  /* Remember to add the class red-paragraph to your <p> tag in order for this to have affect */
   color: red;
 }
 ```
@@ -199,7 +200,7 @@ There's a lot of really cool stuff you can do with CSS now, but unfortunately no
 
 ![Static vs. dynamic](http://www.smooth-step.com/images/content/dynamic-static-website-schemes3.gif)
 
-(Image courtesy of http://www.smooth-step.com/web-design/dynamic-websites)
+(Image courtesy of [Smooth Step](http://www.smooth-step.com/web-design/dynamic-websites))
 
 A static web page is one whose content comes entirely from the files delivered to the client. The example HTML from above is a static webpage. Unless the web page is changed by the owner, a static web page will look the same for every visitor.
 
