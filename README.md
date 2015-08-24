@@ -115,9 +115,9 @@ For now, start off with an `.html` file with these elements:
 ```
 
 **Todo**
-> What is an HTTP request?
-
 > What is CSS and how is it used?
+
+> What is an HTTP request? How is it used?
 
 > What's the difference between static and dynamic web pages?
 
