@@ -2,7 +2,15 @@
 
 > The internet is NOT a ["series of tubes"](https://www.youtube.com/watch?v=f99PcP0aFNE)! 
 
-This intro-web guide will broadly cover important concepts in how the web works, how people interact with it, and the tools used to create and maintain web pages, APIs, databases, etc.
+This intro-web guide will broadly cover important concepts in how the web works, how people interact with it, and 
+the tools used to create and maintain web pages, APIs, databases, etc.
+
+**Todo**
+> What is CSS and how is it used?
+
+> What's the difference between static and dynamic web pages?
+
+> What is your browser's Web Inspector (aka Developer Tools) and how can you use it to poke around in a page's HTML?
 
 ### What is the internet?
 
@@ -114,18 +122,31 @@ For now, start off with an `.html` file with these elements:
 </html>
 ```
 
-**Todo**
-> What is CSS and how is it used?
-
-> What is an HTTP request? How is it used?
-
-> What's the difference between static and dynamic web pages?
-
-> What is your browser's Web Inspector (aka Developer Tools) and how can you use it to poke around in a page's HTML?
-
 ### What is JavaScript?
 
 Javascript is the language which allows you to add, find, update, and manipulate elements in HTML and CSS (along with many other awesome features). It is *essential* to the web, so we wrote **an entire `intro` guide** for it which you can [dvcoders/intro-javascript](https://github.com/dvcoders/intro-javascript).
+
+### What is an HTTP request? How is it used?
+
+Earlier we talked about [clients and servers](https://github.com/dvcoders/intro-web#what-is-a-client-what-is-a-server). Now, we're going to talk about a *protocol* which is simply a standard for enabling the connection, communication, and data transfer between two places on a network.
+
+There are a few type of protocols which are used on the web: HTTP, HTTPS, FTP, and WebSockets. For the sake of convenience we are going to familiarize you with HTTP (the most common protocol between clients and servers).
+
+HTTP stands for *Hyper Text Transfer Protocol*, which defines how web resources should be sent across the internet (HTML, PDF, Images, JSON, etc).
+
+To double back to our restaurant example from earlier, there are **four primary actions** in an HTTP request which describe what interactions the client and server are able to have.
+
+| METHOD | MEANING                                                                                                          | RESPONSE                                                                                                                                                                                                  |
+|--------|------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| GET    | **Request** some specific data from the server <br>Ex. "Could I have another spoon?"                                     | The server gives the client back the requested data (if it exists). Could be an HTML file, a PDF, or [JSON data](http://learnxinyminutes.com/docs/json/).<br>Ex. "Here is your spoon" Success!     |
+| POST   | **Insert** some data into the server <br>Ex. "I would like to order the spaghetti"                                       | The client gives the server the data you wish to insert. Usually, this would be in JSON form. <br>Ex. "Your order has been placed" Success!                                                         |
+| PUT    | **Update** an existing piece of data <br>Ex. "Could you tell the chef to make my pasta extra spicy?"  | The client tells the server **what** needs to be **updated**  Usually with some ID or name, as well as the data. <br>Ex. "Just in time, the chef made your meal extra spicy" Success!          |
+| DELETE | **Delete** an existing piece of data <br>Ex. "I would like to cancel my order, you restaurant sucks!" | The client tells the server **what** needs to be **deleted**. This time you only need to give the ID, the server will handle the actual deleting. <br>Ex. "Alright, your order has been canceled" Success! |
+
+
+<small>**JSON** stands for *Javascript Object Notation*. It is a way to model objects using JavaScript notation and you will come to *love* it! [Here's a quick example](http://learnxinyminutes.com/docs/json/)</small>
+
+[Here's an excellent video which covers HTTP, APIs, and REST APIs](https://www.youtube.com/watch?v=7YcW25PHnAA)!
 
 ### What happens when you click "search" on google.com?
 
