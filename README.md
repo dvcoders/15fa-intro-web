@@ -202,9 +202,11 @@ There's a lot of really cool stuff you can do with CSS now, but unfortunately no
 
 (Image courtesy of [Smooth Step](http://www.smooth-step.com/web-design/dynamic-websites))
 
-A static web page is one whose content comes entirely from the files delivered to the client. The example HTML from above is a static webpage. Unless the web page is changed by the owner, a static web page will look the same for every visitor.
+Static webpages are simply HTML, CSS, and JavaScript which is sent directly to the client. For example, the [dvcoders website](https://dvcoders.com) is a static page. Just serving up our HTML with CSS and some JavaScript. You don't have to be logged in to view it, or have some special password.
 
-A dynamic web page relies on a server to fetch information. For example, [The New York Times](http://www.nytimes.com) is dynamic. Otherwise, every time a news story came out, the HTML and CSS would have to be edited. A dynamic page site uses a language such as Python, PHP, or Java to fetch the relevant information from the server.
+Dynamic Webpages are different for each person. Some prime examples would be Twitter, Facebook, InSite, etc. These are all dependent on you being logged in, and the content needs to be dynamically created and served to you. If facebook.com wasn't dynamic, then you news feed would not be updated in real time.
+
+These types of services have an intermediary level between the client and the server, the *application server*, which does the custom creation of the page based on a specific user. Application servers can be written using PHP, .NET, or Java. 
 
 ### What are your browser's developer tools and how can they be used?
 
