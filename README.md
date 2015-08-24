@@ -210,23 +210,32 @@ These types of services have an intermediary level between the client and the se
 
 ### What are your browser's developer tools and how can they be used?
 
+Modern browsers include tools to allow users to easily access the HTML, Javascript, and CSS of a webpage. There are a lot of useful features, and it can be overwhelming, but we'll focus only on the most useful features for web development. 
 
-Modern browsers include tools to allow users to easily access the HTML, Javascript, and CSS of a webpage. There are a lot of useful features, and it can be overwhelming, but we'll focus only on the most useful features for web development. On Google Chrome, click on the Chrome Menu, go to More Tools... -> Developer Tools. On Safari, click on Develop -> Web Inspector. The Chrome "Elements" tab and Safari's Web Inspector are similar in that they both allow navigation and even editing of the page's HTML through a drop-down tree-style view of the HTML.
+On Google Chrome, click on the Chrome Menu, go to More Tools... -> Developer Tools. On Safari, click on Develop -> Web Inspector. 
 
-![Elements Example](/resources/images/devtools_1.png)
+The Chrome "Elements" tab and Safari's Web Inspector are similar in that they both allow navigation and even editing of the page's HTML through a drop-down tree-style view of the HTML.
 
-To view the HTML of a specific element in either Safari or Chrome, right click on the element on the webpage and go to "Inspect Element." This will take you directly to the code for that element. Looking at the CSS of the elements can also be helpful. In Chrome, it's in the "Style" tab. The CSS affecting the element currently selected in the "Elements" tab will be displayed. It is also editable.
+![Elements Example](./resources/images/devtools_1.png)
 
-![CSS Example](/resources/images/devtools_2.png)
+To view the HTML of a specific element in either Safari or Chrome, right click on the element on the webpage and go to "Inspect Element." 
+
+This will take you directly to the code for that element. Looking at the CSS of the elements can also be helpful. In Chrome, it's in the "Style" tab. The CSS affecting the element currently selected in the "Elements" tab will be displayed. It is also editable.
+
+![CSS Example](./resources/images/devtools_2.png)
 
 In Safari, the CSS is similarly viewable and editable under the "Styles" sidebar of the web inspector.
 
 In the "Networks" tab of Chrome's Devtools or Safari's "Timelines" portion of the Web Inspector, you can view when and how long it takes different elements of the web page to be recieved from the server.
 
-![Network Example](/resources/images/devtools_3.png)
+![Network Example](./resources/images/devtools_3.png)
 
 This element was never loaded. It could mean there's a problem with the server, but in this case it was just because my browser's ad blocker blocked it from ever loading.
 
-One more important element of Developer Tools is the Console. It will show error messages from Javascript, and messages "logged" by the javascript developer. When writing javascript, you may want to see what a certain variable contains. You can either type `console.log(variable)` into the console or include the line in your javascript code itself. Either way, the value will show up in the console.
+One more important element of Developer Tools is the **Console**. 
 
-![Console Example](/resources/images/devtools_4.png)
+It will show error messages from Javascript, and messages "logged" by the javascript developer. When writing javascript, you may want to see what a certain variable contains. You can either type `console.log(variable)` into the console or include the line in your javascript code itself. Either way, the value will show up in the console.
+
+![Console Example](./resources/images/devtools_4.png)
+
+<small>**Note: You will use the console heavily to test your webpages and check for errors!**</small>
