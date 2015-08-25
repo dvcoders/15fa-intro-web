@@ -254,7 +254,7 @@ It will show error messages from Javascript, and messages "logged" by the javasc
 
 -- 
 
-### To wrap it all up - What happens when you press search on google.com?
+### Conclusion - What happens when you press search on google.com?
 
 Some amazing people detailed and described **every single step** from pressing `Enter/Return ⏎` on your keyboard to the entire HTTP exchange when you **press search on google.com**.
 
