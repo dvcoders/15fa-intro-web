@@ -1,6 +1,6 @@
 ## Web Technology Guide
 
-> The internet is NOT a ["series of tubes"](https://www.youtube.com/watch?v=f99PcP0aFNE)! 
+> **The internet is NOT a** ["series of tubes"](https://www.youtube.com/watch?v=f99PcP0aFNE)! 
 
 This intro-web guide will broadly cover important concepts in how the web works, how people interact with it, and 
 the tools used to create and maintain web pages, APIs, databases, etc.
