@@ -263,5 +263,5 @@ It will show error messages from Javascript, and messages "logged" by the javasc
 
 Some amazing people detailed and described **every single step** from pressing `Enter/Return ⏎` on your keyboard to the entire HTTP exchange.
 
-It's amazing and it's called [what happens when?](https://github.com/what-happens-when) - you should read the entire thing, it's absolutely fascinating!
+It's amazing and it's called [what happens when?](https://github.com/alex/what-happens-when) - you should read the entire thing, it's absolutely fascinating!
 
