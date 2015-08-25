@@ -2,7 +2,8 @@
 
 > The internet is NOT a ["series of tubes"](https://www.youtube.com/watch?v=f99PcP0aFNE)! 
 
-This intro-web guide will broadly cover important concepts in how the web works, how people interact with it, and the tools used to create and maintain web pages, APIs, databases, etc.
+This intro-web guide will broadly cover important concepts in how the web works, how people interact with it, and 
+the tools used to create and maintain web pages, APIs, databases, etc.
 
 ### What is the internet?
 
@@ -33,6 +34,7 @@ This request/response model makes the basis for how the client and server intera
 To serve or send a web page, file, picture, or video directly would be very hard! These files can be very large and sending them would take ages!
 
 Sending data requires **three** key things:
+
   1. Rules for "packaging" data - (breaking into tiny pieces)
   2. An interconnected network to send over - (ex.the internet)
   3. A way to "route" the data to the computer which needs to receive it — (IP Address)
@@ -53,7 +55,7 @@ We've covered how the the internet is structured, but how does the computer send
 
 An IP address is a unique number assigned to computer while you're connected to a computer network.
 
-It is assigned by following protocols, *TCP * and *IP*. This protocol is responsible for addressing, routing, and transferring information. You can read more about TCP/IP [here](http://www.thegeekstuff.com/2011/11/tcp-ip-fundamentals/).
+It is assigned by following protocols, *TCP* and *IP*. This protocol is responsible for addressing, routing, and transferring information. You can read more about TCP/IP [here](http://www.thegeekstuff.com/2011/11/tcp-ip-fundamentals/).
 
 That is an example of a IPv4 (32 bit) address, which was an early addresses protocol. There have been so many devices connecting to the internet, that IPv6 (128 bit) needed to be invented to accommodate new devices.
 
@@ -61,90 +63,66 @@ Just to put it into perspective, IPv4 can hold 4.2 x 10^9 unique addresses. IPv6
 
 ### What are DNS servers?
 
-When a user accesses a website like [twitter.com](https://twitter.com), the **Domain Name System** translates the human-readable url twitter.com into an IP Address by doing a **lookup**.
+When a user accesses a website like [https://twitter.com](https://twitter.com), the **Domain Name System** translates the human-readable url twitter.com into an IP Address by doing a **lookup**.
 
-The Domain Name System is maintained by a distributed database system, which uses the client–server model. The nodes of this database are the name servers. 
+> The Domain Name System is maintained by a distributed database system, which uses the client–server model. The nodes of this database are the name servers. 
 
-Each domain has at least one authoritative DNS server that publishes information about that domain and the name servers of any domains subordinate to it. The top of the hierarchy is served by the root name servers, the servers to query when looking up (resolving) a TLD. 
+> Each domain has at least one authoritative DNS server that publishes information about that domain and the name servers of any domains subordinate to it. The top of the hierarchy is served by the root name servers, the servers to query when looking up (resolving) a TLD. 
 
 [Source: [Wikipedia](https://en.wikipedia.org/wiki/Domain_Name_System#Name_servers)]
 
-### What is an HTTP Request?
-
-
-**Todo**
-
-
-
-
-> What is your browser's Web Inspector (aka Developer Tools) and how can you use it to poke around in a page's HTML?
-
-
-### What happens when you click "search" on google.com?
-
-Some amazing people detailed and described **every single step** from pressing `Enter/Return ⏎` on your keyboard to the entire HTTP exchange.
-
-It's amazing and it's called [what happens when?](https://github.com/what-happens-when) - you should read the entire thing, it's absolutely fascinating!
-
-
 ### What is HTML and how is it used?
-
 
 HyperText Markup Language is a markup language used to add structure and content to webpages.
 
-
-HTML is composed of a series of tags such as `<p>` (paragraph) and `<img>` (image) to indicate different types of content. The `<div>` tag is used to break up groups of content.
-  
+HTML is composed of a series of tags such as `<p>` (paragraph) and `<div>` (image) to indicate different types of content.
 
 Your browser interprets the tags and uses them to display the content how it is specified.
 
-
-HTML follows the Document Object Model (DOM) convention. The DOM is a "tree" or "hierarchy" composed of objects. HTML elements are objects in the tree. Tags such as `<p>` and `<img>` specify elements. The DOM is called a "tree" because elements can be "children" of an element, or "parents" of elements as well.
+HTML follows the Document Object Model (DOM) convention. The DOM is a "tree" or "hierarchy" composed of objects. HTML elements are objects in the tree. Tags such as `<p>` and `<div>` specify elements. The DOM is called a "tree" because elements can be "children" of an element, or "parents" of elements as well.
 
 ![DOM Tree](http://www.w3schools.com/js/pic_htmltree.gif)
 
+(Image courtesy of w3schools.com)
 
-(Image courtesy of [w3schools.com](http://www.w3schools.com))
+Play around with HTML by creating a file with the extension `.html` using any text editor. You can learn about the specific syntax and structure from [w3schools](http://www.w3schools.com/html/) or [devdocs](http://devdocs.io/html/) for quick reference.
 
+For now, start off with an `.html` file with these elements:
 
-Play around with HTML by creating a file with the extension `.html` using any text editor. You can learn about the specific syntax and structure from [w3schools](http://www.w3schools.com/html/) but for now you can start off with something simple like this:
-
-
-```
+```html
 <!DOCTYPE html>
 <html>
-<!-- This is a comment, it won't show up on the website -->
-<head> <!-- This section includes information about your page, 
-            including links to CSS and Javascript (which we'll talk about later) -->
-  <title>My Cool Site</title> <!-- This is displayed in the "tab" for your site on your browser -->
-</head>
+  <head> 
+    <title>My Cool Site</title> <!-- This is displayed in the "tab" for your site on your browser -->
+  </head>
 
-<body>
-  <h1>Big heading</h1> <!-- The <h[NUMBER]> tag is for "headers" which means big bold text -->
-  <div class="small-headings"> <!-- Classes will be discussed in the CSS section. -->
+  <body>
+    <!-- The <h[NUMBER]> tag is for "headers" which means big bold text -->
+    <h1>Big heading</h1> 
     <h2>Smaller heading</h2>
     <h3>Even smaller heading</h3>
-  </div>
-  <p>This is a paragraph</p> <!-- <p> is for paragraph, what a surprise -->
-  <img src="http://i.imgur.com/J8TTXgx.png"> <!-- you can include images too -->
-  <br> <!-- Line break -->
-  <br>
-  <p><b>Have fun</b> play around with tags.</p>
-</body>
+    <h6>The smallest heading</h6>
+    
+    <!-- Paragraphs start with <p> tag, surprise! -->
+    <p>This is a paragraph</p>
+    
+    <!-- you can include images too -->
+    <img src="http://i.imgur.com/J8TTXgx.png"> 
+    
+    <!-- Line break -->
+    <br> 
+    <p> <b>Have fun!</b> play around with tags.</p>
+  </body>
 </html>
 ```
 
-
 ### What is CSS and how is it used?
-
 
 CSS or *Cascading Style Sheets* is a language used to style the appearance and layout of a webpage (HTML).
 
-
 To use CSS for your webpage, create a file with the extension `.css` in the same directory (folder) as your `html` file. Then "link" the CSS and HTML together by putting the following line in the `<head>` section of your `html` file:
 
-
-```
+```html
 <head>
   <link rel="stylesheet" type="text/css" href="[FILENAME].css">
 </head>
@@ -154,7 +132,7 @@ CSS uses "selectors" to refer to the portions of the document that you want to a
 
 After the selector are a number of declarations, which include properties and values. One such declaration might be `background-color: green`. Put it together with a selector like this:
 
-```
+```css
 p {
   background-color:green;
   /* Include more declarations here */
@@ -173,7 +151,7 @@ Now in your css, use the selector `.red-paragraph` to refer to any element with 
 
 There is a lot to learn about CSS and [w3schools](http://learnxinyminutes.com/docs/css/) is a great reference. For now, you can play around with CSS by writing it in `style.css` and then adding `<link rel="stylesheet" type="text/css" href="style.css">` to your html `<head>` section. One example CSS file might look like this:
 
-```
+```css
 html { /* The html selector refers to the entire document */
   /* This is a hex code referring to a color */
   background-color: #CCFFFF; 
@@ -203,6 +181,32 @@ p {
 Notice that `red-paragraph` is in italics, because the declaration in `p` affects *ALL* paragraphs, even the ones with a class.
 
 There's a lot of really cool stuff you can do with CSS now, but unfortunately not everything is supported by all browsers. Check out some cool stuff like [transitions](http://www.w3schools.com/css/css3_transitions.asp) and [animations](http://www.w3schools.com/css/css3_animations.asp).
+
+### What is JavaScript?
+
+Javascript is the language which allows you to add, find, update, and manipulate elements in HTML and CSS (along with many other awesome features). It is *essential* to the web, so we wrote **an entire `intro` guide** for it which you can [dvcoders/intro-javascript](https://github.com/dvcoders/intro-javascript).
+
+  
+### What is an HTTP request? How is it used?
+
+Earlier we talked about [clients and servers](https://github.com/dvcoders/intro-web#what-is-a-client-what-is-a-server). Now, we're going to talk about a *protocol* which is simply a standard for enabling the connection, communication, and data transfer between two places on a network.
+
+There are a few type of protocols which are used on the web: HTTP, HTTPS, FTP, and WebSockets. For the sake of convenience we are going to familiarize you with HTTP (the most common protocol between clients and servers).
+
+HTTP stands for *Hyper Text Transfer Protocol*, which defines how web resources should be sent across the internet (HTML, PDF, Images, JSON, etc).
+
+To double back to our restaurant example from earlier, there are **four primary actions** in an HTTP request which describe what interactions the client and server are able to have.
+
+| METHOD | MEANING                                                                                                          | RESPONSE                                                                                                                                                                                                  |
+|--------|------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| GET    | **Request** some specific data from the server <br>Ex. "Could I have another spoon?"                                     | The server gives the client back the requested data (if it exists). Could be an HTML file, a PDF, or [JSON data](http://learnxinyminutes.com/docs/json/).<br>Ex. "Here is your spoon" Success!     |
+| POST   | **Insert** some data into the server <br>Ex. "I would like to order the spaghetti"                                       | The client gives the server the data you wish to insert. Usually, this would be in JSON form. <br>Ex. "Your order has been placed" Success!                                                         |
+| PUT    | **Update** an existing piece of data <br>Ex. "Could you tell the chef to make my pasta extra spicy?"  | The client tells the server **what** needs to be **updated**  Usually with some ID or name, as well as the data. <br>Ex. "Just in time, the chef made your meal extra spicy" Success!          |
+| DELETE | **Delete** an existing piece of data <br>Ex. "I would like to cancel my order, you restaurant sucks!" | The client tells the server **what** needs to be **deleted**. This time you only need to give the ID, the server will handle the actual deleting. <br>Ex. "Alright, your order has been canceled" Success! |
+
+<small>**JSON** stands for *Javascript Object Notation*. It is a way to model objects using JavaScript notation and you will come to *love* it! [Here's a quick example](http://learnxinyminutes.com/docs/json/)</small>
+
+[Here's an excellent video which covers HTTP, APIs, and REST APIs](https://www.youtube.com/watch?v=7YcW25PHnAA)!
 
 ### What's the difference between static and dynamic web pages?
 
@@ -247,3 +251,17 @@ It will show error messages from Javascript, and messages "logged" by the javasc
 ![Console Example](./resources/images/devtools_4.png)
 
 <small>**Note: You will use the console heavily to test your webpages and check for errors!**</small>
+
+-- 
+### Conclusion
+
+**Todo** 
+
+> Write Conclusion
+
+### What happens when you click "search" on google.com?
+
+Some amazing people detailed and described **every single step** from pressing `Enter/Return ⏎` on your keyboard to the entire HTTP exchange.
+
+It's amazing and it's called [what happens when?](https://github.com/what-happens-when) - you should read the entire thing, it's absolutely fascinating!
+
