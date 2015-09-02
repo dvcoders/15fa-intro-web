@@ -1,6 +1,6 @@
 ## Web Technology Guide
 
-> **The internet is NOT a** ["series of tubes"](https://www.youtube.com/watch?v=f99PcP0aFNE)! 
+> **The internet is NOT a** ["series of tubes"](https://youtu.be/f99PcP0aFNE?t=129)! 
 
 This intro-web guide will broadly cover important concepts in how the web works, how people interact with it, and 
 the tools used to create and maintain web pages, APIs, databases, etc.
@@ -259,3 +259,4 @@ It will show error messages from Javascript, and messages "logged" by the javasc
 Some amazing people detailed and described **every single step** from pressing `Enter/Return ⏎` on your keyboard to the entire HTTP exchange when you **press search on google.com**.
 
 It's amazing and it's called [what happens when?](https://github.com/alex/what-happens-when) - you should read the entire thing, it's absolutely fascinating!
+	
