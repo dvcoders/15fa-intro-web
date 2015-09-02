@@ -228,19 +228,19 @@ On Google Chrome, click on the Chrome Menu, go to More Tools... -> Developer Too
 
 The Chrome "Elements" tab and Safari's Web Inspector are similar in that they both allow navigation and even editing of the page's HTML through a drop-down tree-style view of the HTML.
 
-![Elements Example](./resources/images/devtools_1.png)
+![Elements Example](./web-resources/images/devtools_1.png)
 
 To view the HTML of a specific element in either Safari or Chrome, right click on the element on the webpage and go to "Inspect Element." 
 
 This will take you directly to the code for that element. Looking at the CSS of the elements can also be helpful. In Chrome, it's in the "Style" tab. The CSS affecting the element currently selected in the "Elements" tab will be displayed. It is also editable.
 
-![CSS Example](./resources/images/devtools_2.png)
+![CSS Example](./web-resources/images/devtools_2.png)
 
 In Safari, the CSS is similarly viewable and editable under the "Styles" sidebar of the web inspector.
 
-In the "Networks" tab of Chrome's Devtools or Safari's "Timelines" portion of the Web Inspector, you can view when and how long it takes different elements of the web page to be recieved from the server.
+In the "Networks" tab of Chrome's Devtools or Safari's "Timelines" portion of the Web Inspector, you can view when and how long it takes different elements of the web page to be received from the server.
 
-![Network Example](./resources/images/devtools_3.png)
+![Network Example](./web-resources/images/devtools_3.png)
 
 This element was never loaded. It could mean there's a problem with the server, but in this case it was just because my browser's ad blocker blocked it from ever loading.
 
@@ -248,7 +248,7 @@ One more important element of Developer Tools is the **Console**.
 
 It will show error messages from Javascript, and messages "logged" by the javascript developer. When writing javascript, you may want to see what a certain variable contains. You can either type `console.log(variable)` into the console or include the line in your javascript code itself. Either way, the value will show up in the console.
 
-![Console Example](./resources/images/devtools_4.png)
+![Console Example](./web-resources/images/devtools_4.png)
 
 <small>**Note: You will use the console heavily to test your webpages and check for errors!**</small>
 
@@ -259,4 +259,3 @@ It will show error messages from Javascript, and messages "logged" by the javasc
 Some amazing people detailed and described **every single step** from pressing `Enter/Return ⏎` on your keyboard to the entire HTTP exchange when you **press search on google.com**.
 
 It's amazing and it's called [what happens when?](https://github.com/alex/what-happens-when) - you should read the entire thing, it's absolutely fascinating!
-
