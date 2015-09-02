@@ -208,18 +208,6 @@ To double back to our restaurant example from earlier, there are **four primary 
 
 [Here's an excellent video which covers HTTP, APIs, and REST APIs](https://www.youtube.com/watch?v=7YcW25PHnAA)!
 
-### What's the difference between static and dynamic web pages?
-
-![Static vs. dynamic](http://www.smooth-step.com/images/content/dynamic-static-website-schemes3.gif)
-
-(Image courtesy of [Smooth Step](http://www.smooth-step.com/web-design/dynamic-websites))
-
-Static webpages are simply HTML, CSS, and JavaScript which is sent directly to the client. For example, the [dvcoders website](https://dvcoders.com) is a static page. Just serving up our HTML with CSS and some JavaScript. You don't have to be logged in to view it, or have some special password.
-
-Dynamic Webpages are different for each person. Some prime examples would be Twitter, Facebook, InSite, etc. These are all dependent on you being logged in, and the content needs to be dynamically created and served to you. If facebook.com wasn't dynamic, then you news feed would not be updated in real time.
-
-These types of services have an intermediary level between the client and the server, the *application server*, which does the custom creation of the page based on a specific user. Application servers can be written using PHP, .NET, or Java. 
-
 ### What are your browser's developer tools and how can they be used?
 
 Modern browsers include tools to allow users to easily access the HTML, Javascript, and CSS of a webpage. There are a lot of useful features, and it can be overwhelming, but we'll focus only on the most useful features for web development. 
