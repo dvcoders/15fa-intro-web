@@ -1,12 +1,10 @@
 ## Intro Web
 
+> Want to learn about a the web applications, servers, HTTP, and REST APIs?
 
-This intro-web guide will broadly cover important concepts in how the web works, how people interact with it, and 
-the tools used to create and maintain web pages, APIs, databases, etc.
+**Well you came to there right place!**
 
-Want to learn about a the web applications, servers, HTTP, and REST APIs?
-
-Well you came to there right place!
+This intro-web guide will broadly cover important concepts in how the web works, how people interact with it, and the tools used to create and maintain web pages, APIs, databases, etc.
 
 Intro-Web consists of two parts (both you can read and do on your own if you'd like!)
 
