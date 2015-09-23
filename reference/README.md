@@ -77,7 +77,11 @@ To double back to our restaurant example from earlier, there are **four primary 
 
 [Here's an excellent video which covers HTTP, APIs, and REST APIs](https://www.youtube.com/watch?v=7YcW25PHnAA)!
 
-### What is SSL? (HTTPS)
+### What is TLS and HTTPS?
+
+Transport Layer Securtiy - TLS, previously known as SSL, is a method to provide secure, encrypted communications between computers.
+
+Once a secured connection is established between a server and client using TLS, HTTPS is the protocol used for sending and recieving information. HTTPS prevents the interception of data. Initially used for banking and purchases, it is now adopted on many web services (including [dvcoders.com](dvcoders.com).)
 
 ## Server
 
