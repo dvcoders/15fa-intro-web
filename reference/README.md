@@ -129,9 +129,22 @@ The client can be thought of as a customer at a restaurant. They look a menu, de
 
 **Note**: The customer did not go into the kitchen to make their own meal. They trusted that waiter would fulfill their request.
 
-#### What is REST (API)
-Explain endpoints, etc.
-	
+#### What is a REST (API)?
+A RESTful API is an *architectural style* - no code involved. It simply described how an API should function.
+
+Guess what? HTTP already does the work for us, so we can make a request to an REST API like this:
+
+`http://maps.google.com/api/maps/geocode/json?location=chicago`
+
+REST APIs have **endpoints** which are different parts of the API you can access.
+
+- `/maps`: The Google Maps API
+- `/geocode`: The part that deal with Latitude and Longitude (47.54, -86.43)
+- `/json`: We would like our data to be in JSON format (vs. XML or Plain Text)
+- `?location=chicago`: We're giving the `/geocode` end point a **field**, think of this as giving a function in C++ an argument. We're asking for the geolocation information for Chicago.
+
+REST APIs work in this way, you navigate to different endpoints and ask values and get a response back.
+
 #### Incoming server requests (POST, GET, DELETE, PUT)
 
 How things are routed, processed, etc.
