@@ -36,10 +36,20 @@ HTML follows the Document Object Model (DOM) convention. The DOM is a "tree" or 
 Cascading Style Sheets is a language used to design the appearance and formatting of a webpage.
 
 ### How does the browser work?
-- Rendering html
-- rendering CSS
-- Optimization
-- Sanboxing
+
+![Trees](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/images/render-tree-construction.png)
+
+(Image courtesy of develpers.google.com)
+
+Browsers use a rendering engine to interpret the HTML and create what is called a content tree. The content tree follows the DOM structure in creating nodes of connected elements like `<p>` and `<img>`.
+
+The rendering engine also reads the styling of the elements in the HTML and related CSS files. Then, the CSSOM -- CSS Object Model -- is constructed by the rendering engine with information about each node's style.
+
+Using the content tree and CSSOM, the render tree is also constructed, which only contains elements that will be displayed. The render tree will not contain elements such as `head` which contain no visible content.
+
+In a process called "layout", the rendering engine uses the render tree to calculate the position and size of each element. Then, the elements are placed in the browser screen in a process called "painting."
+
+Browsers such as Chrome and Firefox use a method known as sandboxing as a security feature. Malicious code from a website will be prevented from causing damage and accessing the system's files.
 
 ### How the browser gets HTML/CSS from a server?
 - Browsers and servers need to interact in a  **fixed** and agreed upon manner
@@ -50,24 +60,54 @@ Cascading Style Sheets is a language used to design the appearance and formattin
 
 Earlier we talked about [clients and servers](https://github.com/dvcoders/intro-web#what-is-a-client-what-is-a-server). Now, we're going to talk about a *protocol* which is simply a standard for enabling the connection, communication, and data transfer between two places on a network.
 
-There are a few type of protocols which are used on the web: HTTP, HTTPS, FTP, and WebSockets. 
-
-For the sake of convenience we are going to familiarize you with HTTP (the most common protocol between clients and servers).
-
 To double back to our restaurant example from earlier, there are **four primary actions** in an HTTP request which describe what interactions the client and server are able to have.
 
 | METHOD | MEANING                                                                                                          | RESPONSE                                                                                                                                                                                                  |
 |--------|------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| GET    | **Request** some specific data from the server <br>Ex. "Could I have another spoon?"                                     | The server gives the client back the requested data (if it exists). Could be an HTML file, a PDF, or [JSON data](http://learnxinyminutes.com/docs/json/).<br>Ex. "Here is your spoon" Success!     |
-| POST   | **Insert** some data into the server <br>Ex. "I would like to order the spaghetti"                                       | The client gives the server the data you wish to insert. Usually, this would be in JSON form. <br>Ex. "Your order has been placed" Success!                                                         |
-| PUT    | **Update** an existing piece of data <br>Ex. "Could you tell the chef to make my pasta extra spicy?"  | The client tells the server **what** needs to be **updated**  Usually with some ID or name, as well as the data. <br>Ex. "Just in time, the chef made your meal extra spicy" Success!          |
+| GET    | **Read** some specific data from the server <br>Ex. "Could I have another spoon?"                                     | The server gives the client back the requested data (if it exists). Could be an HTML file, a PDF, or [JSON data](http://learnxinyminutes.com/docs/json/).<br>Ex. "Here is your spoon" Success!     |
+| POST   | **Create** some data on the server <br>Ex. "I would like to order the spaghetti"                                       | The client gives the server the data you wish to insert. Usually, this would be in JSON form. <br>Ex. "Your order has been placed" Success!                                                         |
+| PUT    | **Update** an existing piece of data <br>Ex. "Could you tell the chef no anchovies in my pasta?"  | The client tells the server **what** needs to be **updated**  Usually with some ID or name, as well as the data. <br>Ex. "Just in time, the chef made your meal extra spicy" Success!          |
 | DELETE | **Delete** an existing piece of data <br>Ex. "I would like to cancel my order, you restaurant sucks!" | The client tells the server **what** needs to be **deleted**. This time you only need to give the ID, the server will handle the actual deleting. <br>Ex. "Alright, your order has been canceled" Success! |
 
-<small>**JSON** stands for *Javascript Object Notation*. It is a way to model objects using JavaScript notation and you will come to *love* it! [Here's a quick example](http://learnxinyminutes.com/docs/json/)</small>
+### What is JSON
 
-[Here's an excellent video which covers HTTP, APIs, and REST APIs](https://www.youtube.com/watch?v=7YcW25PHnAA)!
+**JSON** stands for *Javascript Object Notation*. It a Data type for OOP in JavaScript.
 
-### What is SSL? (HTTPS)
+JSON is the most common **response** from a server. The server will send the information back in JSON format!
+
+Here's some sample JSON - it is based on a `"key"`:`value` pair, which means you access the value by asking for the key!
+
+<small>This is a lot like arrays, except their keys are indexes 0,1,3,etc. And you can have arrays inside of arrays!</small>
+
+``` js
+{
+  "key": "value",
+
+  "keys": "must always be enclosed in double quotes",
+  "numbers": 0,
+  "strings": "Hellø, wørld. All unicode is allowed, along with \"escaping\".",
+  "has bools?": true,
+  "nothingness": null,
+
+  "big number": 1.2e+100,
+
+  "objects": {
+    "comment": "Most of your structure will come from objects.",
+
+    "array": [0, 1, 2, 3, "Arrays can have anything in them.", 5],
+
+    "another object": {
+      "comment": "These things can be nested inside one another, very useful."
+    }
+  },
+}
+```
+
+### What is TLS and HTTPS?
+
+Transport Layer Securtiy - TLS, previously known as SSL, is a method to provide secure, encrypted communications between computers.
+
+Once a secured connection is established between a server and client using TLS, HTTPS is the protocol used for sending and recieving information. HTTPS prevents the interception of data. Initially used for banking and purchases, it is now adopted on many web services (including [dvcoders.com](dvcoders.com).)
 
 ## Server
 
@@ -75,11 +115,13 @@ To double back to our restaurant example from earlier, there are **four primary 
 
 An IP address is a unique number assigned to computer while you're connected to a computer network (using TCP/IP - there are protocols).
 
+Servers usually have their own IP address and can be accessed through that address. However most people just type in the website they want to go to (ex. [Twitter.com](https://twitter.com)) and DNS does the rest
+
+<small>If you'd like to read more about IP and DNS look at the [extra-reference](./extra-reference/README.md) section</small>
+
 An IP address looks like this: **192.235.5.154**
 
-That is an example of a IPv4 (32 bit) address, which was an early addresses protocol. There have been so many devices connecting to the internet, that IPv6 (128 bit) needed to be invented to accommodate new devices.
-
-Just to put it into perspective, IPv4 can hold 4.2 billion unique addresses. IPv6 can hold 3.4 * 10^38 addresses!
+Just to put it into perspective, IPv4 can hold 4.2 billion unique addresses (2^32). IPv6 can hold 3.4 * 10^38 addresses (2^128).
 
 ### What happens when you click "search" on google.com?
 
@@ -101,18 +143,43 @@ The client can be thought of as a customer at a restaurant. They look a menu, de
 
 **Note**: The customer did not go into the kitchen to make their own meal. They trusted that waiter would fulfill their request.
 
-#### What is REST (API)
-Explain endpoints, etc.
-	
-#### Incoming server requests (POST, GET, DELETE, PUT)
+#### What is a REST (API)?
+A RESTful API is an *architectural style* - no code involved. It simply described how an API should function.
 
-How things are routed, processed, etc.
+Guess what? HTTP already does the work for us, so we can make a request to an REST API like this:
+
+`http://maps.google.com/api/maps/geocode/json?location=chicago`
+
+REST APIs have **endpoints** which are different parts of the API you can access.
+
+- `/maps`: The Google Maps API
+- `/geocode`: The part that deal with Latitude and Longitude (47.54, -86.43)
+- `/json`: We would like our data to be in JSON format (vs. XML or Plain Text)
+- `?location=chicago`: We're giving the `/geocode` end point a **query parameter**, think of this as giving a function in C++ an argument. We're asking for the geolocation information for Chicago.
+
+REST APIs work in this way, you navigate to different endpoints and ask values and get a response back.
 	
 #### Responding to request with HTTP
 
-- Status Codes (https://http.cat)
-- JSON, XML, PLAIN TEXT, BINARY
-- Pagination
+Once a request is recieved and processed by the server, a response is sent back. The response includes a "status code" which is three digit identifier to give information about the response. The server developers decide which status code is appropriate for the situation.
+
+- Codes starting with 1 are informational
+- Codes beginning with 2 refer to requested actions have been recieved and are successfully processed
+- Codes beginning with 3 mean more action must be taken by the client to continue
+- Codes beginning with 4 are client errors
+- Codes beginning with 5 are server errors
+
+[http.cat](https://http.cat) hosts cat images corresponding with each status code
+
+If the HTTP request was GET, some data will be returned by the server. This may be:
+
+- HTML
+- JSON (a standard for holding data -- often used in API requests)
+- XML (another type of data representation)
+- Plain text
+- Binary data (such as an image file)
+
+Communication with the server allows web pages to serve different content without loading a whole new page. For example, imgur.com scrolls continually. Every time your browser reaches the bottom of the page, a GET request is made and the server returns a new set of images. Sometime this is referred to as "pagination" when content is broken into pages, such as a google search.
 
 #### Some common, but important tools for servers
 - Database
