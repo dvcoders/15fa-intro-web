@@ -1,6 +1,6 @@
-# Intro-Web Workshop
+# Workshop
 
-###Clients
+##Clients
 **NOTE** : every **GET** method request can be made with **browsers**
 * Postman
   * https://chrome.google.com/webstore/detail/postman-rest-client-short/mkhojklkhkdaghjjfdnphfphiaiohkef?hl=en (Old version)
@@ -8,9 +8,10 @@
 * CURL
   * http://bagder.github.io/curl-cheat-sheet/http-sheet.html
 
-<hr>
 
-###Server - dvcoders home brewed API 
+
+
+##Server - dvcoders home brewed API 
 ##### Our API stack 
   * Java 8
   * Dropwizard framework [Jetty (HTTP), Jersey (REST), Jackson (JSON)] 
@@ -37,9 +38,10 @@
   * **409 - Conflict**. Request may conflict with existing data
   * **500 - Internal Server Error**. Server's error. Failed to process the request 
 
-<hr>
 
-###Working with REST Endpoint
+
+
+##Working with REST Endpoint
 **NOTE** :
  * **Request** - Client to Server
  * **Response** - Server to Client
@@ -68,11 +70,11 @@ Response :
     "event_id": "db471924-b33b-4b18-b8a8-dc0951677dcf"
 }
 ```
+*The client makes a request to the server. The server find all of the saved users in database, then return the users (JSON formatted) to the client with an OK.*
 
-**GET /user?student_id={studentId}** - *Get a specific user information*
+
+**GET /user?student_id=1234567** - *Get the infomation of the user with the student_id of 1234567*
 ```
-Query Param : {studentId} = Your student ID. Example : 1234567
-
 Response :
 {
     "student_id": "1234567",
@@ -84,8 +86,23 @@ Response :
     "event_id": "d70d3abd-1dea-4589-8231-e7589ba34267"
 }
 ```
+*The client makes a GET request to the server with the data of student_id of 1234567. The server takes the student_id=1234567 from that request and do a lookup in the database. The data has been found, then the server returns the user (JSON formatted) to the client with an OK.*
 
-**POST /user** - *Creating a user*
+
+**GET /user?student_id=0** - *Get the infomation of the user with the student_id of 0*
+```
+Response :
+{
+  message: "User not found",
+  code: 404,
+  current_at: 1443050798167,
+  event_id: "9662ac5f-85bc-4820-8a2b-dd7f3e09defa"
+}
+```
+*The client makes a GET request to the server with the data of student_id of 0. The server takes the student_id=0 from that request and do a lookup in the database. The data couldn't find the data, then the server returns an error with the status of NOT FOUND.*
+
+
+**POST /user** - *Attempt to create an user with the student id that has already been used*
 ```
 Request :
 {
@@ -102,6 +119,8 @@ Response :
     "event_id": "f73b7d0b-11e0-47ff-864e-024527e43804"
 }
 ```
+*The client makes a POST request with the data of ^. The server validates the request body, then takes the student_id that from that request and do a lookup in the database. The server found out that there is a data associated with the given student_id, then the server returns an error with the status of CONFLICT.*
+
 
 **POST /user** - *Create an user and store it in the database*
 ```
@@ -122,8 +141,23 @@ Response:
     "event_id": "98f9b8df-e1c6-40a3-ab39-a99e88e87a49"
 }
 ```
+*The client makes a POST request with the data of ^. The server validates the request body, then takes the student_id that from that request and do a lookup in the database. The server fails to find any data with that student_id, then the server save the user to the database and return what have been saved to the client with the status of OK.*
 
-**GET /github/{studentId}** - *Attempt to redirect to user's github account that doesn't have github information* 
+
+**GET /user?student_id={student_id}** - *Get the infomation of the user with the student_id of {student_id}*
+```
+Response :
+{
+    "student_id": "<STUDENT_ID>",
+    "first_name": "<FIRST_NAME>",
+    "last_name": "<LAST_NAME>",
+    "code": 200,
+    "current_at": 1443047644053,
+    "event_id": "d70d3abd-1dea-4589-8231-e7589ba34267"
+}
+```
+
+**GET /github/{studentId}** - *Attempt to redirect to user's github account, but the user doesn't have github information in the profile* 
 ```
 Path Param : {studentId} = Your student ID. Example : 0000000 
 
