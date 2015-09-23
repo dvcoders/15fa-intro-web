@@ -184,12 +184,6 @@ Communication with the server allows web pages to serve different content withou
 - Load balancer
 - Message Queue
 
-## What comes after HTTP?
-
-### WebSockets
-
-### Long-Polling technique
-
 ## What happens when you click "search" on google.com?
 
 > Check this out on your own time
