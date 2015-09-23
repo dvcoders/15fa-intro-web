@@ -1,4 +1,4 @@
-# Intro Web Workshop
+# Intro-Web Workshop
 
 ###Clients
 **NOTE** : every **GET** method request can be made with **browsers**
@@ -8,6 +8,7 @@
 * CURL
   * http://bagder.github.io/curl-cheat-sheet/http-sheet.html
 
+<hr>
 
 ###Server - dvcoders home brewed API 
 ##### Our API stack 
@@ -16,6 +17,8 @@
      * http://www.dropwizard.io/getting-started.html
   * MongoDB 
      * http://docs.mongodb.org/manual/
+  * It's open source
+     * https://github.com/dvcoders/workshop-server 
 
 ##### REST API (Ref : https://github.com/dvcoders/intro-web/tree/master/reference#http-hypertext-transfer-protocol)
   * **GET - Read a record**. Body request is not needed. Query Param and Path Param are optional 
@@ -33,6 +36,8 @@
   * **404 - Not Found**. Data or endpoint not found 
   * **409 - Conflict**. Request may conflict with existing data
   * **500 - Internal Server Error**. Server's error. Failed to process the request 
+
+<hr>
 
 ###Working with REST Endpoint
 **NOTE** :
@@ -189,4 +194,6 @@ Response :
   * Starbucks API - https://testhost.openapi.starbucks.com/location/v2/stores
   * Twitter API - https://dev.twitter.com/rest/tools/console
   * Facebook API - https://developers.facebook.com/tools/explorer
+
+
 
