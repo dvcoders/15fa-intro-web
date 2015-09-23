@@ -3,7 +3,7 @@
 ##Clients
 * Postman
   * https://chrome.google.com/webstore/detail/postman-rest-client-short/mkhojklkhkdaghjjfdnphfphiaiohkef?hl=en
-
+  * https://www.getpostman.com
 * CURL
   * http://bagder.github.io/curl-cheat-sheet/http-sheet.html
 
@@ -17,27 +17,28 @@
      * http://docs.mongodb.org/manual/
 
 * REST API (Ref : https://github.com/dvcoders/intro-web/tree/master/reference#http-hypertext-transfer-protocol)
-  * GET - Read a record, NO body, OPTIONAL query param OR path param
-  * POST - Create a record, body
-  * PUT - Update a record, body
-  * DELETE - Delete a record
+  * GET - Read a record. Body request is not needed. Query Param and Path Param are optional 
+  * POST - Create a record. Body request needed
+  * PUT - Update a record. Body request needed 
+  * DELETE - Delete a record. Body request needed
 
 * HTTP Status Code 
-  * 200 - OK, everything is good
-  * 307 - Temporary Redirect, im temporarily sending you to abc.xyz
-  * 400 - Bad Request, not giving me what i expected
-  * 401 - Unauthorized, need to identify yourself first
-  * 403 - Forbidden, i am refuse to respond to you, i don’t care who are you
-  * 404 - Not Found, what you requested is not found
-  * 409 - Conflict, about to make a changes that cause conflict
-  * 500 - Internal Server Error, my bad, failed to process the data
+  * **200 - OK**. Everything is good
+  * **307 - Temporary Redirect**. Temporarily redirecting the Client to abc.xyz 
+  * **400 - Bad Request**. Client did not give me what Server am expecting 
+  * **401 - Unauthorized**. Client needs to identify itself. Usually by including `Authorization` in header 
+  * **403 - Forbidden**. Server refuses to respond to the Client 
+  * **404 - Not Found**. Data or endpoint not found 
+  * **409 - Conflict**. Request may conflict with existing data
+  * **500 - Internal Server Error**. Server's error. Failed to process the request 
 
 ##Working with REST Endpoint
-*Request* - Client sends to a Server
-*Response* - Server sends to a Client
+*Request* - Client -> Server
+
+*Response* - Server -> Client
 
 
-GET     /user/list - *Get all of the users in database*
+**GET /user/list** - *Get all of the users in database*
 ```
 Response :
 {
@@ -61,7 +62,7 @@ Response :
 }
 ```
 
-GET     /user?student_id={studentId} - *Get a specific user information*
+**GET /user?student_id={studentId}** - *Get a specific user information*
 ```
 Query Param : {studentId} = Your student ID. Example : 1234567
 
@@ -77,7 +78,7 @@ Response :
 }
 ```
 
-POST    /user - *Creating a user*
+**POST /user** - *Creating a user*
 ```
 Request :
 {
@@ -95,7 +96,7 @@ Response :
 }
 ```
 
-POST    /user - *Create an user and store it in the database*
+**POST /user** - *Create an user and store it in the database*
 ```
 Request:
 {
@@ -115,7 +116,7 @@ Response:
 }
 ```
 
-GET     /github/{studentId} - *Failure case* 
+**GET /github/{studentId}** - *Failure case* 
 ```
 Path Param : {studentId} = Your student ID. Example : 0000000 
 
@@ -128,7 +129,7 @@ Response :
 }
 ```
 
-PUT     /user - *Update the user information*
+**PUT /user** - *Update the user information*
 ```
 Request:
 {
@@ -148,12 +149,12 @@ Response:
 }
 ```
 
-GET     /github/{studentId} - *Redirect to user's github profile*
+**GET /github/{studentId}** - *Redirect to user's github profile*
 ```
 magics.
 ```
 
-DELETE  /user - *Delete a user from database*
+**DELETE  /user** - *Delete a user from database*
 ```
 Request :
 {
@@ -170,7 +171,7 @@ Response :
 ```
 
 
-GET     /user/null - *Demostrate an Internal Server Error* 
+**GET /user/null** - *Demostrate an Internal Server Error* 
 ```
 Response :
 {
