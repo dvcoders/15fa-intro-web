@@ -144,10 +144,6 @@ REST APIs have **endpoints** which are different parts of the API you can access
 - `?location=chicago`: We're giving the `/geocode` end point a **field**, think of this as giving a function in C++ an argument. We're asking for the geolocation information for Chicago.
 
 REST APIs work in this way, you navigate to different endpoints and ask values and get a response back.
-
-#### Incoming server requests (POST, GET, DELETE, PUT)
-
-How things are routed, processed, etc.
 	
 #### Responding to request with HTTP
 
