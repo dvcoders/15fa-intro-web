@@ -33,7 +33,13 @@ HTML follows the Document Object Model (DOM) convention. The DOM is a "tree" or 
 
 ### What is CSS
 
-Cascading Style Sheets is a language used to design the appearance and formatting of a webpage.
+Cascading Style Sheets is a language used to design the appearance and formatting of a webpage. The styling information *could* for a web page be included in the HTML, but CSS keeps the styling information in an easy to follow format, without cluttering the HTML file. Selectors refer to certain elements within the HTML. For example:
+
+`div p`
+
+This refers to paragraphs within div elements. Within selectors, properties such as `background-color`, and values such as `red` will style the elements.
+
+More about the specifics of HTML and CSS will come in intro-css-html.
 
 ### How does the browser work?
 
