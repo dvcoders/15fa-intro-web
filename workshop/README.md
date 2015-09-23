@@ -1,6 +1,7 @@
 # Intro Web Workshop
 
 ##Clients
+**NOTE** : **GET** method request can be made with **browsers**
 * Postman
   * https://chrome.google.com/webstore/detail/postman-rest-client-short/mkhojklkhkdaghjjfdnphfphiaiohkef?hl=en (Old version)
   * https://www.getpostman.com (New version)
@@ -8,22 +9,22 @@
   * http://bagder.github.io/curl-cheat-sheet/http-sheet.html
 
 
-##dvcoders home brewed API 
-### Our API stack 
+##Server - dvcoders home brewed API 
+##### Our API stack 
   * Java 8
   * Dropwizard framework [Jetty (HTTP), Jersey (REST), Jackson (JSON)] 
      * http://www.dropwizard.io/getting-started.html
   * MongoDB 
      * http://docs.mongodb.org/manual/
 
-### REST API (Ref : https://github.com/dvcoders/intro-web/tree/master/reference#http-hypertext-transfer-protocol)
+##### REST API (Ref : https://github.com/dvcoders/intro-web/tree/master/reference#http-hypertext-transfer-protocol)
   * **GET - Read a record**. Body request is not needed. Query Param and Path Param are optional 
   * **POST - Create a record**. Body request needed
   * **PUT - Update a record**. Body request needed 
   * **DELETE - Delete a record**. Body request needed
   * **HEAD - Get the header**. Body request is not needed.
 
-### HTTP Status Code 
+##### HTTP Status Code 
   * **200 - OK**. Everything is good
   * **307 - Temporary Redirect**. Temporarily redirecting the Client to abc.xyz 
   * **400 - Bad Request**. Client did not give me what Server am expecting 
@@ -182,3 +183,10 @@ Response :
     "event_id": "59a3eece-a975-4cf5-ae9d-d39a2e7f5f02"
 }
 ```
+
+## Other than dvcoders API
+  * Google Maps API - https://maps.googleapis.com/maps/api/geocode/json?address=chicago
+  * Starbucks API - https://testhost.openapi.starbucks.com/location/v2/stores
+  * Twitter API - https://dev.twitter.com/rest/tools/console
+  * Facebook API - https://developers.facebook.com/tools/explorer
+
