@@ -51,6 +51,32 @@ In a process called "layout", the rendering engine uses the render tree to calcu
 
 Browsers such as Chrome and Firefox use a method known as sandboxing as a security feature. Malicious code from a website will be prevented from causing damage and accessing the system's files.
 
+## Server
+
+### What is an IP Address?
+
+An IP address is a unique number assigned to computer while you're connected to a computer network (using TCP/IP - there are protocols).
+
+Servers usually have their own IP address and can be accessed through that address. However most people just type in the website they want to go to (ex. [Twitter.com](https://twitter.com)) and DNS does the rest
+
+<small>If you'd like to read more about IP and DNS look at the [extra-reference](./extra-reference/README.md) section</small>
+
+An IP address looks like this: **192.235.5.154**
+
+Just to put it into perspective, IPv4 can hold 4.2 billion unique addresses (2^32). IPv6 can hold 3.4 * 10^38 addresses (2^128).
+
+### What are the differences between Client and Server?
+
+- A "client" is what the user uses on their machine to request information from servers (websites usually).
+
+- A "server" is a computer which handles a client's request (web page, file, video, etc.)
+
+The web browser you're using right now is the "client" on your computer which helps you request web pages like Youtube, Facebook, or Reddit.
+
+The client can be thought of as a customer at a restaurant. They look a menu, decide what they want, and make a request to the waiter (server) who places that order. Some time later the waiter comes back with the meal. The waiter is able to create the meal through the kitchen; when the meal was done the waiter responded to the customer's request with a completed meal.
+
+**Note**: The customer did not go into the kitchen to make their own meal. They trusted that waiter would fulfill their request.
+
 ### How the browser gets HTML/CSS from a server?
 - Browsers and servers need to interact in a  **fixed** and agreed upon manner
 - We can call this a protocol
@@ -109,40 +135,6 @@ Transport Layer Securtiy - TLS, previously known as SSL, is a method to provide 
 
 Once a secured connection is established between a server and client using TLS, HTTPS is the protocol used for sending and recieving information. HTTPS prevents the interception of data. Initially used for banking and purchases, it is now adopted on many web services (including [dvcoders.com](dvcoders.com).)
 
-## Server
-
-### What is an IP Address?
-
-An IP address is a unique number assigned to computer while you're connected to a computer network (using TCP/IP - there are protocols).
-
-Servers usually have their own IP address and can be accessed through that address. However most people just type in the website they want to go to (ex. [Twitter.com](https://twitter.com)) and DNS does the rest
-
-<small>If you'd like to read more about IP and DNS look at the [extra-reference](./extra-reference/README.md) section</small>
-
-An IP address looks like this: **192.235.5.154**
-
-Just to put it into perspective, IPv4 can hold 4.2 billion unique addresses (2^32). IPv6 can hold 3.4 * 10^38 addresses (2^128).
-
-### What happens when you click "search" on google.com?
-
-> Check this out on your own time
-
-Some amazing people detailed and described **every single step** from pressing `Enter/Return ⏎` on your keyboard to accessing a server on a CDN.
-
-It's amazing and it's called [what happens when?](https://github.com/what-happens-when) - it's a long read but you should read the entire thing, it's absolutely fascinating!
-
-#### What are the differences between Client and Server?
-
-- A "client" is what the user uses on their machine to request information from servers (websites usually).
-
-- A "server" is a computer which handles a client's request (web page, file, video, etc.)
-
-The web browser you're using right now is the "client" on your computer which helps you request web pages like Youtube, Facebook, or Reddit.
-
-The client can be thought of as a customer at a restaurant. They look a menu, decide what they want, and make a request to the waiter (server) who places that order. Some time later the waiter comes back with the meal. The waiter is able to create the meal through the kitchen; when the meal was done the waiter responded to the customer's request with a completed meal.
-
-**Note**: The customer did not go into the kitchen to make their own meal. They trusted that waiter would fulfill their request.
-
 #### What is a REST (API)?
 A RESTful API is an *architectural style* - no code involved. It simply described how an API should function.
 
@@ -191,5 +183,13 @@ Communication with the server allows web pages to serve different content withou
 ### WebSockets
 
 ### Long-Polling technique
+
+## What happens when you click "search" on google.com?
+
+> Check this out on your own time
+
+Some amazing people detailed and described **every single step** from pressing `Enter/Return ⏎` on your keyboard to accessing a server on a CDN.
+
+It's amazing and it's called [what happens when?](https://github.com/what-happens-when) - it's a long read but you should read the entire thing, it's absolutely fascinating!
 
 
