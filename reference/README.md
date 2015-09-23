@@ -147,9 +147,22 @@ REST APIs work in this way, you navigate to different endpoints and ask values a
 	
 #### Responding to request with HTTP
 
-- Status Codes (https://http.cat)
-- JSON, XML, PLAIN TEXT, BINARY
-- Pagination
+A REST API endpoint like this one `https://api.twitter.com/1.1/statuses/` needs to be able to respond to GET, POST, PUT and DELETE.
+
+The programmers on the server-side decide what HTTP requests an endpoint can accept (it does not have to accept all of them). 
+
+For example: If you wan to update a Tweet after tweeting it you cannot! That's just how twitter works. A PUT request to the above endpoint will likely give you an error.
+
+When an API request succeeds or fails, the API needs to send back a **Status Code** (a number) which tells the Client if things went successfully or if there was a kind of error (can't find anything).
+
+The most common ones are
+
+- 200: Okay! Everything succeeded
+- 401: Unauthorized, you tried to request something you were not supposed to... bad!
+- 403: Forbidden, wrong user name and password or API key entirely!
+- 404: Not Found, could't find anything here.
+
+Go look at [HTTP.CAT](http://http.cat) you'll be happy you did! :cat:
 
 #### Some common, but important tools for servers
 - Database
