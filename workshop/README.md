@@ -2,27 +2,28 @@
 
 ##Clients
 * Postman
-  * https://chrome.google.com/webstore/detail/postman-rest-client-short/mkhojklkhkdaghjjfdnphfphiaiohkef?hl=en
-  * https://www.getpostman.com
+  * https://chrome.google.com/webstore/detail/postman-rest-client-short/mkhojklkhkdaghjjfdnphfphiaiohkef?hl=en (Old version)
+  * https://www.getpostman.com (New version)
 * CURL
   * http://bagder.github.io/curl-cheat-sheet/http-sheet.html
 
 
 ##dvcoders home brewed API 
-* Talk about this API stack 
+### Our API stack 
   * Java 8
   * Dropwizard framework [Jetty (HTTP), Jersey (REST), Jackson (JSON)] 
      * http://www.dropwizard.io/getting-started.html
   * MongoDB 
      * http://docs.mongodb.org/manual/
 
-* REST API (Ref : https://github.com/dvcoders/intro-web/tree/master/reference#http-hypertext-transfer-protocol)
-  * GET - Read a record. Body request is not needed. Query Param and Path Param are optional 
-  * POST - Create a record. Body request needed
-  * PUT - Update a record. Body request needed 
-  * DELETE - Delete a record. Body request needed
+### REST API (Ref : https://github.com/dvcoders/intro-web/tree/master/reference#http-hypertext-transfer-protocol)
+  * **GET - Read a record**. Body request is not needed. Query Param and Path Param are optional 
+  * **POST - Create a record**. Body request needed
+  * **PUT - Update a record**. Body request needed 
+  * **DELETE - Delete a record**. Body request needed
+  * **HEAD - Get the header**. Body request is not needed.
 
-* HTTP Status Code 
+### HTTP Status Code 
   * **200 - OK**. Everything is good
   * **307 - Temporary Redirect**. Temporarily redirecting the Client to abc.xyz 
   * **400 - Bad Request**. Client did not give me what Server am expecting 
