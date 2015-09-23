@@ -124,9 +124,25 @@ How things are routed, processed, etc.
 	
 #### Responding to request with HTTP
 
-- Status Codes (https://http.cat)
-- JSON, XML, PLAIN TEXT, BINARY
-- Pagination
+Once a request is recieved and processed by the server, a response is sent back. The response includes a "status code" which is three digit identifier to give information about the response. The server developers decide which status code is appropriate for the situation.
+
+- Codes starting with 1 are informational
+- Codes beginning with 2 refer to requested actions have been recieved and are successfully processed
+- Codes beginning with 3 mean more action must be taken by the client to continue
+- Codes beginning with 4 are client errors
+- Codes beginning with 5 are server errors
+
+[http.cat](https://http.cat) hosts cat images corresponding with each status code
+
+If the HTTP request was GET, some data will be returned by the server. This may be:
+
+- HTML
+- JSON (a standard for holding data -- often used in API requests)
+- XML (another type of data representation)
+- Plain text
+- Binary data (such as an image file)
+
+Communication with the server allows web pages to serve different content without loading a whole new page. For example, imgur.com scrolls continually. Every time your browser reaches the bottom of the page, a GET request is made and the server returns a new set of images. Sometime this is referred to as "pagination" when content is broken into pages, such as a google search.
 
 #### Some common, but important tools for servers
 - Database
