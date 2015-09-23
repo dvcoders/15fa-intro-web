@@ -141,7 +141,7 @@ REST APIs have **endpoints** which are different parts of the API you can access
 - `/maps`: The Google Maps API
 - `/geocode`: The part that deal with Latitude and Longitude (47.54, -86.43)
 - `/json`: We would like our data to be in JSON format (vs. XML or Plain Text)
-- `?location=chicago`: We're giving the `/geocode` end point a **field**, think of this as giving a function in C++ an argument. We're asking for the geolocation information for Chicago.
+- `?location=chicago`: We're giving the `/geocode` end point a **query parameter**, think of this as giving a function in C++ an argument. We're asking for the geolocation information for Chicago.
 
 REST APIs work in this way, you navigate to different endpoints and ask values and get a response back.
 	
