@@ -63,7 +63,7 @@ To double back to our restaurant example from earlier, there are **four primary 
 
 **JSON** stands for *Javascript Object Notation*. It a Data type for OOP in JavaScript.
 
-Is is also the simplest and most common data type clients and servers send between each other.
+JSON is the most common **response** from a server. The server will send the information back in JSON format!
 
 Here's some sample JSON - it is based on a `"key"`:`value` pair, which means you access the value by asking for the key!
 
