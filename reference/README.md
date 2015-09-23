@@ -36,10 +36,20 @@ HTML follows the Document Object Model (DOM) convention. The DOM is a "tree" or 
 Cascading Style Sheets is a language used to design the appearance and formatting of a webpage.
 
 ### How does the browser work?
-- Rendering html
-- rendering CSS
-- Optimization
-- Sanboxing
+
+![Trees](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/images/render-tree-construction.png)
+
+(Image courtesy of develpers.google.com)
+
+Browsers use a rendering engine to interpret the HTML and create what is called a content tree. The content tree follows the DOM structure in creating nodes of connected elements like `<p>` and `<img>`.
+
+The rendering engine also reads the styling of the elements in the HTML and related CSS files. Then, the CSSOM -- CSS Object Model -- is constructed by the rendering engine with information about each node's style.
+
+Using the content tree and CSSOM, the render tree is also constructed, which only contains elements that will be displayed. The render tree will not contain elements such as `head` which contain no visible content.
+
+In a process called "layout", the rendering engine uses the render tree to calculate the position and size of each element. Then, the elements are placed in the browser screen in a process called "painting."
+
+Browsers such as Chrome and Firefox use a method known as sandboxing as a security feature. Malicious code from a website will be prevented from causing damage and accessing the system's files.
 
 ### How the browser gets HTML/CSS from a server?
 - Browsers and servers need to interact in a  **fixed** and agreed upon manner
@@ -67,7 +77,11 @@ To double back to our restaurant example from earlier, there are **four primary 
 
 [Here's an excellent video which covers HTTP, APIs, and REST APIs](https://www.youtube.com/watch?v=7YcW25PHnAA)!
 
-### What is SSL? (HTTPS)
+### What is TLS and HTTPS?
+
+Transport Layer Securtiy - TLS, previously known as SSL, is a method to provide secure, encrypted communications between computers.
+
+Once a secured connection is established between a server and client using TLS, HTTPS is the protocol used for sending and recieving information. HTTPS prevents the interception of data. Initially used for banking and purchases, it is now adopted on many web services (including [dvcoders.com](dvcoders.com).)
 
 ## Server
 
@@ -110,9 +124,25 @@ How things are routed, processed, etc.
 	
 #### Responding to request with HTTP
 
-- Status Codes (https://http.cat)
-- JSON, XML, PLAIN TEXT, BINARY
-- Pagination
+Once a request is recieved and processed by the server, a response is sent back. The response includes a "status code" which is three digit identifier to give information about the response. The server developers decide which status code is appropriate for the situation.
+
+- Codes starting with 1 are informational
+- Codes beginning with 2 refer to requested actions have been recieved and are successfully processed
+- Codes beginning with 3 mean more action must be taken by the client to continue
+- Codes beginning with 4 are client errors
+- Codes beginning with 5 are server errors
+
+[http.cat](https://http.cat) hosts cat images corresponding with each status code
+
+If the HTTP request was GET, some data will be returned by the server. This may be:
+
+- HTML
+- JSON (a standard for holding data -- often used in API requests)
+- XML (another type of data representation)
+- Plain text
+- Binary data (such as an image file)
+
+Communication with the server allows web pages to serve different content without loading a whole new page. For example, imgur.com scrolls continually. Every time your browser reaches the bottom of the page, a GET request is made and the server returns a new set of images. Sometime this is referred to as "pagination" when content is broken into pages, such as a google search.
 
 #### Some common, but important tools for servers
 - Database
