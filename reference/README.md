@@ -36,10 +36,20 @@ HTML follows the Document Object Model (DOM) convention. The DOM is a "tree" or 
 Cascading Style Sheets is a language used to design the appearance and formatting of a webpage.
 
 ### How does the browser work?
-- Rendering html
-- rendering CSS
-- Optimization
-- Sanboxing
+
+![Trees](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/images/render-tree-construction.png)
+
+(Image courtesy of develpers.google.com)
+
+Browsers use a rendering engine to interpret the HTML and create what is called a content tree. The content tree follows the DOM structure in creating nodes of connected elements like `<p>` and `<img>`.
+
+The rendering engine also reads the styling of the elements in the HTML and related CSS files. Then, the CSSOM -- CSS Object Model -- is constructed by the rendering engine with information about each node's style.
+
+Using the content tree and CSSOM, the render tree is also constructed, which only contains elements that will be displayed. The render tree will not contain elements such as `head` which contain no visible content.
+
+In a process called "layout", the rendering engine uses the render tree to calculate the position and size of each element. Then, the elements are placed in the browser screen in a process called "painting."
+
+Browsers such as Chrome and Firefox use a method known as sandboxing as a security feature. Malicious code from a website will be prevented from causing damage and accessing the system's files.
 
 ### How the browser gets HTML/CSS from a server?
 - Browsers and servers need to interact in a  **fixed** and agreed upon manner
