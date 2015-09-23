@@ -1,7 +1,7 @@
 # Intro Web Workshop
 
-##Clients
-**NOTE** : **GET** method request can be made with **browsers**
+###Clients
+**NOTE** : every **GET** method request can be made with **browsers**
 * Postman
   * https://chrome.google.com/webstore/detail/postman-rest-client-short/mkhojklkhkdaghjjfdnphfphiaiohkef?hl=en (Old version)
   * https://www.getpostman.com (New version)
@@ -9,7 +9,7 @@
   * http://bagder.github.io/curl-cheat-sheet/http-sheet.html
 
 
-##Server - dvcoders home brewed API 
+###Server - dvcoders home brewed API 
 ##### Our API stack 
   * Java 8
   * Dropwizard framework [Jetty (HTTP), Jersey (REST), Jackson (JSON)] 
@@ -34,13 +34,13 @@
   * **409 - Conflict**. Request may conflict with existing data
   * **500 - Internal Server Error**. Server's error. Failed to process the request 
 
-##Working with REST Endpoint
-*Request* - Client -> Server
+###Working with REST Endpoint
+**NOTE** :
+ * **Request** - Client to Server
+ * **Response** - Server to Client
 
-*Response* - Server -> Client
 
-
-**GET /user/list** - *Get all of the users in database*
+**GET /user/list** - *Get all of the users in the database*
 ```
 Response :
 {
@@ -118,7 +118,7 @@ Response:
 }
 ```
 
-**GET /github/{studentId}** - *Failure case* 
+**GET /github/{studentId}** - *Attempt to redirect to user's github account that doesn't have github information* 
 ```
 Path Param : {studentId} = Your student ID. Example : 0000000 
 
@@ -173,7 +173,7 @@ Response :
 ```
 
 
-**GET /user/null** - *Demostrate an Internal Server Error* 
+**GET /user/null** - *Internal Server Error request* 
 ```
 Response :
 {
