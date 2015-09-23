@@ -50,10 +50,6 @@ Cascading Style Sheets is a language used to design the appearance and formattin
 
 Earlier we talked about [clients and servers](https://github.com/dvcoders/intro-web#what-is-a-client-what-is-a-server). Now, we're going to talk about a *protocol* which is simply a standard for enabling the connection, communication, and data transfer between two places on a network.
 
-There are a few type of protocols which are used on the web: HTTP, HTTPS, FTP, and WebSockets. 
-
-For the sake of convenience we are going to familiarize you with HTTP (the most common protocol between clients and servers).
-
 To double back to our restaurant example from earlier, there are **four primary actions** in an HTTP request which describe what interactions the client and server are able to have.
 
 | METHOD | MEANING                                                                                                          | RESPONSE                                                                                                                                                                                                  |
@@ -63,9 +59,39 @@ To double back to our restaurant example from earlier, there are **four primary 
 | PUT    | **Update** an existing piece of data <br>Ex. "Could you tell the chef to make my pasta extra spicy?"  | The client tells the server **what** needs to be **updated**  Usually with some ID or name, as well as the data. <br>Ex. "Just in time, the chef made your meal extra spicy" Success!          |
 | DELETE | **Delete** an existing piece of data <br>Ex. "I would like to cancel my order, you restaurant sucks!" | The client tells the server **what** needs to be **deleted**. This time you only need to give the ID, the server will handle the actual deleting. <br>Ex. "Alright, your order has been canceled" Success! |
 
-<small>**JSON** stands for *Javascript Object Notation*. It is a way to model objects using JavaScript notation and you will come to *love* it! [Here's a quick example](http://learnxinyminutes.com/docs/json/)</small>
+### What is JSON
 
-[Here's an excellent video which covers HTTP, APIs, and REST APIs](https://www.youtube.com/watch?v=7YcW25PHnAA)!
+**JSON** stands for *Javascript Object Notation*. It a Data type for OOP in JavaScript.
+
+Is is also the simplest and most common data type clients and servers send between each other.
+
+Here's some sample JSON - it is based on a `"key"`:`value` pair, which means you access the value by asking for the key!
+
+<small>This is a lot like arrays, except their keys are indexes 0,1,3,etc. And you can have arrays inside of arrays!</small>
+
+``` js
+{
+  "key": "value",
+
+  "keys": "must always be enclosed in double quotes",
+  "numbers": 0,
+  "strings": "Hellø, wørld. All unicode is allowed, along with \"escaping\".",
+  "has bools?": true,
+  "nothingness": null,
+
+  "big number": 1.2e+100,
+
+  "objects": {
+    "comment": "Most of your structure will come from objects.",
+
+    "array": [0, 1, 2, 3, "Arrays can have anything in them.", 5],
+
+    "another object": {
+      "comment": "These things can be nested inside one another, very useful."
+    }
+  },
+}
+```
 
 ### What is SSL? (HTTPS)
 
