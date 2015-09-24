@@ -86,7 +86,7 @@ Response :
     "event_id": "d70d3abd-1dea-4589-8231-e7589ba34267"
 }
 ```
-*The client makes a GET request to the server with the data of student_id of 1234567. The server takes the student_id=1234567 from that request and do a lookup in the database. The data has been found, then the server returns the user (JSON formatted) to the client with an OK.*
+*The client makes a GET request to the server with the data of student_id of 1234567. The server takes the student_id=1234567 from that request and do a lookup for that user in the database. Once the data has been found, then the server returns the user (JSON formatted) to the client with along with a status of OK.*
 
 
 **GET /user?student_id=0** - *Get the infomation of the user with the student_id of 0*
@@ -96,7 +96,7 @@ Response :
   message: "User not found",
   code: 404,
   current_at: 1443050798167,
-  event_id: "9662ac5f-85bc-4820-8a2b-dd7f3e09defa"
+  event_id: "9662ac5f-85bc-4820-8a2b-dd7f3e09defan"
 }
 ```
 *The client makes a GET request to the server with the data of student_id of 0. The server takes the student_id=0 from that request and do a lookup in the database. The data couldn't find the data, then the server returns an error with the status of NOT FOUND.*
@@ -119,7 +119,7 @@ Response :
     "event_id": "f73b7d0b-11e0-47ff-864e-024527e43804"
 }
 ```
-*The client makes a POST request with the data of ^. The server validates the request body, then takes the student_id that from that request and do a lookup in the database. The server found out that there is a data associated with the given student_id, then the server returns an error with the status of CONFLICT.*
+*The client makes a POST request with data in request body. The server validates the request body, then takes the student_id from the request body and do a lookup for that user in the database. After the database lookup, if the server successfully found a user with that student_id that is provided in the request, then the server returns an error with the status of CONFLICT.*
 
 
 **POST /user** - *Create an user and store it in the database*
@@ -141,7 +141,7 @@ Response:
     "event_id": "98f9b8df-e1c6-40a3-ab39-a99e88e87a49"
 }
 ```
-*The client makes a POST request with the data of ^. The server validates the request body, then takes the student_id that from that request and do a lookup in the database. The server fails to find any data with that student_id, then the server save the user to the database and return what have been saved to the client with the status of OK.*
+*The client makes a POST request with data in request body. The server validates the request body, then takes the student_id from the request body and do an user lookup in the database. The server fails to find any data with that student_id, then the server converts the data in request body into an user object, then save it into to the database. Once it is successfully saved, the server return the user object that has been saved to the client.*
 
 
 **GET /user?student_id={student_id}** - *Get the infomation of the user with the student_id of {student_id}*
@@ -156,10 +156,12 @@ Response :
     "event_id": "d70d3abd-1dea-4589-8231-e7589ba34267"
 }
 ```
+*The client makes a GET request to the server with the data of student_id of 1234567. The server takes the student_id=1234567 from that request and do a lookup in the database. The data has been found, then the server returns the user (JSON formatted) to the client with an OK.*
+
 
 **GET /github/{studentId}** - *Attempt to redirect to user's github account, but the user doesn't have github information in the profile* 
 ```
-Path Param : {studentId} = Your student ID. Example : 0000000 
+Path Param : {studentId} = Your student ID. Example : 1000000 
 
 Response :
 {
@@ -169,6 +171,8 @@ Response :
   event_id: "288881ae-410a-41d8-8a3b-298e0c9264d6"
 }
 ```
+*The client makes a GET request to the server with the path param of studentId of 1000000. The server takes the student_id=1000000 from that request and do a lookup in the database. The data has been found, then the server find if there's any github_url store in the user object. If not then the user returns Forbidden error to prevent the client redirect to empty url.*
+
 
 **PUT /user** - *Update the user information*
 ```
@@ -189,6 +193,8 @@ Response:
     "event_id": "02922c34-b2b7-421a-b7b5-813d8672318f"
 }
 ```
+*The client makes a PUT request with the data of ^. The server validates the request body, then takes the student_id from that request body and do a lookup for the user in the database. The server found the user data, then update the old user data with the new data given in the request body. Finally, save the updated user data into the database and return the data that has been saved along with status of OK to the client.*
+
 
 **GET /github/{studentId}** - *Redirect to user's github profile*
 ```
