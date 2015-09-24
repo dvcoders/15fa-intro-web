@@ -2,6 +2,9 @@
 
 ##Clients
 **NOTE** : every **GET** method request can be made with **browsers**
+
+For this work shop you have the option of using either Postman or curl. Postman is an easy graphical chrome app, while CURL is a command line program, built in to Mac and Linux. You can use either, but Postman is reccommended for beginners:
+
 * Postman
   * https://chrome.google.com/webstore/detail/postman-rest-client-short/mkhojklkhkdaghjjfdnphfphiaiohkef?hl=en (Old version)
   * https://www.getpostman.com (New version)
@@ -11,7 +14,7 @@
 
 
 
-##Server - dvcoders home brewed API 
+##Information about our Server - dvcoders home brewed API 
 ##### Our API stack 
   * Java 8
   * Dropwizard framework [Jetty (HTTP), Jersey (REST), Jackson (JSON)] 
@@ -41,13 +44,24 @@
 
 
 
-##Working with REST Endpoint
+## Beginning the workshop - Working with REST Endpoint
 **NOTE** :
  * **Request** - Client to Server
  * **Response** - Server to Client
 
+You're going to be making different HTTP requests, using Postman or curl. In order to make it easy, Jake created an easy to use list of requests that you can import. In order to do so follow these steps:
 
-**GET /user/list** - *Get all of the users in the database*
+Go to the import section on Postman (at the top). Click on download from link. Paste this link: 
+
+https://raw.githubusercontent.com/JakeLoo/intro-web/master/workshop/dvcoders-workshop.json
+
+![](images/1.png)
+
+All the HTTP requests you'll be doing from now on will be in the "collections" list in Postman:
+
+![](images/4.png)
+
+1. **GET /user/list** - *Get all of the users in the database*
 ```
 Response :
 {
@@ -73,7 +87,7 @@ Response :
 *The client makes a request to the server. The server find all of the saved users in database, then return the users (JSON formatted) to the client with an OK.*
 
 
-**GET /user?student_id=1234567** - *Get the infomation of the user with the student_id of 1234567*
+2. **GET /user?student_id=1234567** - *Get the infomation of the user with the student_id of 1234567*
 ```
 Response :
 {
