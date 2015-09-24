@@ -103,7 +103,7 @@ Response :
 *The client makes a GET request to the server with the data of student_id of 1234567. The server takes the student_id=1234567 from that request and do a lookup for that user in the database. Once the data has been found, then the server returns the user (JSON formatted) to the client with along with a status of OK.*
 
 
-**GET /user?student_id=0** - *Get the infomation of the user with the student_id of 0*
+3. **GET /user?student_id=0** - *Get the infomation of the user with the student_id of 0*
 ```
 Response :
 {
@@ -116,7 +116,7 @@ Response :
 *The client makes a GET request to the server with the data of student_id of 0. The server takes the student_id=0 from that request and do a lookup in the database. The data couldn't find the data, then the server returns an error with the status of NOT FOUND.*
 
 
-**POST /user** - *Attempt to create an user with the student id that has already been used*
+4. **POST /user** - *Attempt to create an user with the student id that has already been used*
 ```
 Request :
 {
@@ -136,7 +136,7 @@ Response :
 *The client makes a POST request with data in request body. The server validates the request body, then takes the student_id from the request body and do a lookup for that user in the database. After the database lookup, if the server successfully found a user with that student_id that is provided in the request, then the server returns an error with the status of CONFLICT.*
 
 
-**POST /user** - *Create an user and store it in the database*
+5. **POST /user** - *Create an user and store it in the database*
 ```
 Request:
 {
@@ -158,7 +158,7 @@ Response:
 *The client makes a POST request with data in request body. The server validates the request body, then takes the student_id from the request body and do an user lookup in the database. The server fails to find any data with that student_id, then the server converts the data in request body into an user object, then save it into to the database. Once it is successfully saved, the server return the user object that has been saved to the client.*
 
 
-**GET /user?student_id={student_id}** - *Get the infomation of the user with the student_id of {student_id}*
+6. **GET /user?student_id={student_id}** - *Get the infomation of the user with the student_id of {student_id}*
 ```
 Response :
 {
@@ -173,7 +173,7 @@ Response :
 *The client makes a GET request to the server with the data of student_id of 1234567. The server takes the student_id=1234567 from that request and do a lookup in the database. After the data has been found, then the server returns the user (JSON formatted) to the client with an OK.*
 
 
-**GET /github/{studentId}** - *Attempt to redirect to user's github account, but the user doesn't have github information in the profile* 
+7. **GET /github/{studentId}** - *Attempt to redirect to user's github account, but the user doesn't have github information in the profile* 
 ```
 Path Param : {studentId} = Your student ID. Example : 1000000 
 
@@ -188,7 +188,7 @@ Response :
 *The client makes a GET request to the server with the path param of studentId of 1000000. The server takes the student_id=1000000 from that request and do a lookup in the database. The data has been found, then the server find if there's any github_url store in the user object. If not then the user returns Forbidden error to prevent the client redirect to empty url.*
 
 
-**PUT /user** - *Update the user information*
+8. **PUT /user** - *Update the user information*
 ```
 Request:
 {
@@ -210,14 +210,14 @@ Response:
 *The client makes a PUT request with the data above. The server validates the request body, then takes the student_id from that request body and do a lookup for the user in the database. The server found the user data, then update the old user data with the new data given in the request body. Finally, save the updated user data into the database and return the data that has been saved along with status of OK to the client.*
 
 
-**GET /github/{studentId}** - *Redirect to user's github profile*
+9. **GET /github/{studentId}** - *Redirect to user's github profile*
 ```
 magics.
 ```
 *The client makes a GET request to the server with the path param of studentId of {student_id}. The server takes the {student_id} from the path param and do a lookup in the database. Then the server gets github_url that is stored in the user object then redirect the client to the github_url that is stored in the user.*
 
 
-**DELETE  /user** - *Delete a user from database*
+10. **DELETE  /user** - *Delete a user from database*
 ```
 Request :
 {
@@ -235,7 +235,7 @@ Response :
 *The client makes a DELETE request to the server with the student_id in the body request. The server returns Unauthorized because your request is not authorized. Thus, the server assumes that you do not have permission to do it.*
 
 
-**GET /user/null** - *Internal Server Error* 
+11. **GET /user/null** - *Internal Server Error* 
 ```
 Response :
 {
@@ -247,12 +247,10 @@ Response :
 ```
 *The clients makes a GET request to the server. The server returns Internal Server Errors because there are some exceptions/error while processing the request*
 
-
 ## Other than dvcoders API
   * Google Maps API - https://maps.googleapis.com/maps/api/geocode/json?address=chicago
   * Starbucks API - https://testhost.openapi.starbucks.com/location/v2/stores
   * Twitter API - https://dev.twitter.com/rest/tools/console
   * Facebook API - https://developers.facebook.com/tools/explorer
-
 
 
