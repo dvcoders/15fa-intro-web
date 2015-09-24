@@ -156,7 +156,7 @@ Response :
     "event_id": "d70d3abd-1dea-4589-8231-e7589ba34267"
 }
 ```
-*The client makes a GET request to the server with the data of student_id of 1234567. The server takes the student_id=1234567 from that request and do a lookup in the database. The data has been found, then the server returns the user (JSON formatted) to the client with an OK.*
+*The client makes a GET request to the server with the data of student_id of 1234567. The server takes the student_id=1234567 from that request and do a lookup in the database. After the data has been found, then the server returns the user (JSON formatted) to the client with an OK.*
 
 
 **GET /github/{studentId}** - *Attempt to redirect to user's github account, but the user doesn't have github information in the profile* 
@@ -193,13 +193,15 @@ Response:
     "event_id": "02922c34-b2b7-421a-b7b5-813d8672318f"
 }
 ```
-*The client makes a PUT request with the data of ^. The server validates the request body, then takes the student_id from that request body and do a lookup for the user in the database. The server found the user data, then update the old user data with the new data given in the request body. Finally, save the updated user data into the database and return the data that has been saved along with status of OK to the client.*
+*The client makes a PUT request with the data above. The server validates the request body, then takes the student_id from that request body and do a lookup for the user in the database. The server found the user data, then update the old user data with the new data given in the request body. Finally, save the updated user data into the database and return the data that has been saved along with status of OK to the client.*
 
 
 **GET /github/{studentId}** - *Redirect to user's github profile*
 ```
 magics.
 ```
+*The client makes a GET request to the server with the path param of studentId of {student_id}. The server takes the {student_id} from the path param and do a lookup in the database. Then the server gets github_url that is stored in the user object then redirect the client to the github_url that is stored in the user.*
+
 
 **DELETE  /user** - *Delete a user from database*
 ```
@@ -216,9 +218,10 @@ Response :
     "event_id": "3356e3e6-7027-4f2a-a9c2-2da92a024c6a"
 }
 ```
+*The client makes a DELETE request to the server with the student_id in the body request. The server returns Unauthorized because your request is not authorized. Thus, the server assumes that you do not have permission to do it.*
 
 
-**GET /user/null** - *Internal Server Error request* 
+**GET /user/null** - *Internal Server Error* 
 ```
 Response :
 {
@@ -228,6 +231,8 @@ Response :
     "event_id": "59a3eece-a975-4cf5-ae9d-d39a2e7f5f02"
 }
 ```
+*The clients makes a GET request to the server. The server returns Internal Server Errors because there are some exceptions/error while processing the request*
+
 
 ## Other than dvcoders API
   * Google Maps API - https://maps.googleapis.com/maps/api/geocode/json?address=chicago
