@@ -51,6 +51,8 @@ For this work shop you have the option of using either Postman or curl. Postman 
 
 You're going to be making different HTTP requests, using Postman or curl. In order to make it easy, Jake created an easy to use list of requests that you can import. In order to do so follow these steps:
 
+![](images/2.png)
+
 Go to the import section on Postman (at the top). Click on download from link. Paste this link: 
 
 https://raw.githubusercontent.com/JakeLoo/intro-web/master/workshop/dvcoders-workshop.json
